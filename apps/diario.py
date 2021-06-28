@@ -22,8 +22,7 @@ list_year = sorted(os.listdir(dir_year))
 number_files_year = len(list_year)
 ano_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in list_year]
 
-month_list = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
-            'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+month_list = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 
 dir23 = diario_PATH.joinpath(ano_options[-1]['value'])
 list23 = os.listdir(dir23)
@@ -81,7 +80,7 @@ layout = html.Div([
             dcc.Dropdown(id = 'month_dropdown', options = month_options, value = month_options[-1]['value']),
             html.H1(' '),
             html.H6('Selecione o dia ou Total'),
-            dcc.Dropdown(id = 'date_dropdown'),
+            dcc.Dropdown(id = 'date_dropdown', options=date_options, value=date_options[-1]['value']),
             html.H1(' '),
             html.H6('Regiões Climáticas: '),
             dcc.Dropdown(id = 'regiao_dropdown', options = region_options, value= 'Recôncavo')
