@@ -38,8 +38,8 @@ list_year = sorted(os.listdir(dir_year))
 number_files_year = len(list_year)
 ano_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in list_year]
 
-month_list = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
-            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+month_list = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
+            'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 
 dir23 = diario_PATH.joinpath(ano_options[-1]['value'])
 list23 = os.listdir(dir23)
@@ -127,6 +127,8 @@ def update_store(month1, ano):
 
     return tabdict, month_options
 
+
+
 @app.callback(
     Output( 'main_title', 'children'),
     Output('graph_title', 'children'),
@@ -154,12 +156,11 @@ def update_titles(Month,date,ano):
 )
 
 def update_options(df):
-    tabela = pd.DataFrame.from_dict(df)
-    region_options = [{'label':i, 'value':i} for i in tabela["regiao"].unique()]
+    df_new = pd.DataFrame.from_dict(df)
+    region_options = [{'label':i, 'value':i} for i in df_new["regiao"].unique()]
     region_value = 'Recôncavo'
-    date_options = [{ 'label': i, 'value': i} for i in tabela.columns[8:]]
+    date_options = [{ 'label': i, 'value': i} for i in df_new.columns[8:]]
     date_value = date_options[-1]['value']
-
     return region_options, region_value, date_options, date_value
 
 @app.callback(
