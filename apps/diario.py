@@ -18,13 +18,7 @@ tabela_PATH = PATH.joinpath("../dados/diario/2021").resolve()
 mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 
 
-tabela = pd.DataFrame(pd.read_csv(tabela_PATH.joinpath('Junho.csv')))
-tab1 = tabela.iloc[:,:8]
-tab2 = tabela.iloc[:,8:].round(1)
 
-tabela = pd.concat([tab1,tab2], axis=1)
-
-tabela2 = pd.DataFrame(tabela)
 dir_year = mensal_PATH
 list_year = sorted(os.listdir(dir_year))
 number_files_year = len(list_year)
@@ -37,7 +31,13 @@ list23 = os.listdir(dir23)
 number_files23 = len(list23)
 month_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in month_list[:number_files23]]
 
+tabela = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano_options[-1]['value'] + "/" + month_options[-1]['value'] + ".csv")))
+tab1 = tabela.iloc[:,:8]
+tab2 = tabela.iloc[:,8:].round(1)
 
+tabela = pd.concat([tab1,tab2], axis=1)
+
+tabela2 = pd.DataFrame(tabela)
 
 municipio_options = [{'label':i, 'value':i} for i in tabela["municipio"].unique()]
 
