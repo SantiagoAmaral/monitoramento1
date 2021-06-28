@@ -22,7 +22,7 @@ mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 diario_PATH = PATH.joinpath("../dados/diario").resolve()
 
 
-climatology = pd.DataFrame(pd.read_csv(clima_PATH.joinpath("Climatologia2.csv")))
+climatology = pd.DataFrame(pd.read_csv(clima_PATH.joinpath("climatologia2.csv")))
 
 
 
