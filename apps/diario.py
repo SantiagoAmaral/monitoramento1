@@ -31,7 +31,7 @@ list23 = os.listdir(dir23)
 number_files23 = len(list23)
 month_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in month_list[:number_files23]]
 
-tabela = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano_options[-1]['value'] + '/' + 'Junho.csv')))
+tabela = pd.DataFrame(pd.read_csv(tabela_PATH.joinpath('Junho.csv')))
 tab1 = tabela.iloc[:,:8]
 tab2 = tabela.iloc[:,8:].round(1)
 
