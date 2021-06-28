@@ -17,24 +17,6 @@ diario_PATH = PATH.joinpath("../dados/diario").resolve()
 tabela_PATH = PATH.joinpath("../dados/diario/2021").resolve()
 mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 
-
-
-tabela = pd.DataFrame(pd.read_csv(tabela_PATH.joinpath("Maio.csv")))
-tab1 = tabela.iloc[:,:8]
-tab2 = tabela.iloc[:,8:].round(1)
-
-tabela = pd.concat([tab1,tab2], axis=1)
-
-tabela2 = pd.DataFrame(tabela)
-
-municipio_options = [{'label':i, 'value':i} for i in tabela["municipio"].unique()]
-
-
-region_options = [{'label':i, 'value':i} for i in tabela["regiao"].unique()]
-date_options = [{ 'label': i, 'value': i} for i in tabela.columns[8:]]
-
-
-
 dir_year = mensal_PATH
 list_year = sorted(os.listdir(dir_year))
 number_files_year = len(list_year)
@@ -47,6 +29,20 @@ dir23 = diario_PATH.joinpath(ano_options[-1]['value'])
 list23 = os.listdir(dir23)
 number_files23 = len(list23)
 month_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in month_list[:number_files23]]
+
+tabela = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano_options[-1]['value'] + "/" + month_options[-1]['value'] + ".csv")))
+tab1 = tabela.iloc[:,:8]
+tab2 = tabela.iloc[:,8:].round(1)
+
+tabela = pd.concat([tab1,tab2], axis=1)
+
+tabela2 = pd.DataFrame(tabela)
+
+municipio_options = [{'label':i, 'value':i} for i in tabela["municipio"].unique()]
+
+
+region_options = [{'label':i, 'value':i} for i in tabela["regiao"].unique()]
+date_options = [{ 'label': i, 'value': i} for i in tabela.columns[8:]]
 
 #px.set_mapbox_access_token(open(".mapbox_token").read())
 
@@ -85,7 +81,7 @@ layout = html.Div([
             dcc.Dropdown(id = 'month_dropdown', options = month_options, value = month_options[-1]['value']),
             html.H1(' '),
             html.H6('Selecione o dia ou Total'),
-            dcc.Dropdown(id = 'date_dropdown', value = date_options[-1]['value']),
+            dcc.Dropdown(id = 'date_dropdown'),
             html.H1(' '),
             html.H6('Regiões Climáticas: '),
             dcc.Dropdown(id = 'regiao_dropdown', options = region_options, value= 'Recôncavo')
