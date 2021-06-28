@@ -10,4 +10,3 @@ app = dash.Dash(__name__,external_stylesheets=external_stylesheets, suppress_cal
                             'content': 'width=device-width, initial-scale=1.0'}])
 
 server = app.server
-app.config.suppress_callback_exceptions = True
