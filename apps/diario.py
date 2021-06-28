@@ -111,9 +111,6 @@ layout = html.Div([
 )
 
 def update_store(month1, ano):
-    if ano=='2021' and month1 == 'Junho':
-        month1 = 'junho'
-    
     df = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano + "/" + month1 + ".csv")))
     dir = diario_PATH.joinpath(ano)
     tab1 = df.iloc[:,:8]
