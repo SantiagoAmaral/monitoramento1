@@ -18,7 +18,7 @@ tabela_PATH = PATH.joinpath("../dados/diario/2021").resolve()
 mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 
 
-tabela = pd.DataFrame(pd.read_csv(tabela_PATH.joinpath('junho.csv')))
+tabela = pd.DataFrame(pd.read_csv(tabela_PATH.joinpath('Junho.csv')))
 tab1 = tabela.iloc[:,:8]
 tab2 = tabela.iloc[:,8:].round(1)
 
