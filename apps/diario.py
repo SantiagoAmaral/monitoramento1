@@ -34,7 +34,7 @@ date_options = [{ 'label': i, 'value': i} for i in tabela.columns[8:]]
 
 
 dir_year = mensal_PATH
-list_year = os.listdir(dir_year)
+list_year = sorted(os.listdir(dir_year))
 number_files_year = len(list_year)
 ano_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in list_year]
 
