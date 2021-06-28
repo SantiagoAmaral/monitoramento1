@@ -17,6 +17,8 @@ diario_PATH = PATH.joinpath("../dados/diario").resolve()
 tabela_PATH = PATH.joinpath("../dados/diario/2021").resolve()
 mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 
+
+
 tabela = pd.DataFrame(pd.read_csv(tabela_PATH.joinpath("Maio.csv")))
 tab1 = tabela.iloc[:,:8]
 tab2 = tabela.iloc[:,8:].round(1)
@@ -83,7 +85,7 @@ layout = html.Div([
             dcc.Dropdown(id = 'month_dropdown', options = month_options, value = month_options[-1]['value']),
             html.H1(' '),
             html.H6('Selecione o dia ou Total'),
-            dcc.Dropdown(id = 'date_dropdown', options = date_options, value = date_options[-1]['value']),
+            dcc.Dropdown(id = 'date_dropdown', value = date_options[-1]['value']),
             html.H1(' '),
             html.H6('Regiões Climáticas: '),
             dcc.Dropdown(id = 'regiao_dropdown', options = region_options, value= 'Recôncavo')
