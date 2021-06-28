@@ -27,7 +27,7 @@ climatology = pd.DataFrame(pd.read_csv(clima_PATH.joinpath("climatologia2.csv"))
 
 
 rain_PATH = PATH.joinpath("../dados/diario/2021").resolve()
-rain = pd.read_csv(rain_PATH.joinpath("junho.csv"))
+rain = pd.read_csv(rain_PATH.joinpath("Junho.csv"))
 
 
 
