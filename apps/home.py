@@ -18,30 +18,30 @@ encoded_image1 = base64.b64encode(open(image_filename1, 'rb').read())
 card_content_diario = [
     dbc.CardBody(
         [
-            html.H4("Precipitação Diária", className="text-body text-center"),
+            html.H4("Precipitação Diária", className="text-dark text-center"),
             html.P(
                 "Dados de Chuva Diária",
-                className="text-body text-center",),
+                className="text-dark text-center",),
     ]),
 ]
 
 card_content_mensal = [
     dbc.CardBody(
         [
-            html.H4("Precipitação Mensal e Anual", className="text-body text-center"),
+            html.H4("Precipitação Mensal e Anual", className="text-dark text-center"),
             html.P(
                 "Analises de Chuva Mensal e Anual",
-                className="text-body text-center",)
+                className="text-dark text-center",)
     ]),
 ]
 
 card_content_focos = [
     dbc.CardBody(
         [
-            html.H4("Focos de Calor", className="text-body text-center"),
+            html.H4("Focos de Calor", className="text-dark text-center"),
             html.P(
                 "(em construção)",
-                className="text-body text-center",),
+                className="text-dark text-center",),
     ]),
 ]
 

@@ -1,4 +1,7 @@
+from dash_bootstrap_components._components.Col import Col
+from dash_bootstrap_components._components.Row import Row
 import pandas as pd
+import plotly.express as px
 import dash
 from dash.dependencies import Input, Output
 import dash_html_components as html
@@ -15,6 +18,7 @@ from app import app
 
 # meta_tags are required for the app layout to be mobile responsive
 
+app.config.external_stylesheets = [dbc.themes.SLATE]
 
 PATH = pathlib.Path(__file__).parent
 clima_PATH = PATH.joinpath("../dados").resolve()
@@ -65,38 +69,41 @@ layout = html.Div([
     dcc.Store(id='memory', storage_type='local'),
     dcc.Store(id='memory_anual', storage_type='local'),
     dbc.Row([ 
-            dbc.Col(html.H1(children='Analise de Precipitação no Estado da Bahia', style={ 'textAlign': 'center'}, 
+            dbc.Col(html.H1(children='Analise de Precipitação no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
             className="mb-1"))
             ]),
-    dbc.Row([html.H1(' ')]),
-    dbc.Row([
-            dbc.Col(dbc.Card(html.H2("Precipitação Mensal", className="text-center text-bold text-dark "), body=True, color="#c8c8c8"), 
-            className="mb-1")
-        ]),
+    dbc.Row([html.H1(' ', style={"margin-top": "10px"})]),
+    dbc.Row(dbc.Col(dcc.Graph(id='estacoes-maps'), width={"size": 6 ,"offset": 0}, md=4), justify="center"),
+    dbc.Row([html.H1(' ', style={"margin-top": "30px"})]),
     dbc.Row([
         dbc.Col([
-            html.H4('Estações: ', style={ 'textAlign': 'center'}),
-            html.H5('Ano: ' ),
-            dcc.Dropdown(id = 'year_dropdown', options = year_options, value = year_options[-1]['value']),
-            html.H1(' '),
-            html.H5('Estações: '),
+            html.H4(' ', style={ "margin-top": "10px", 'textAlign': 'center'}),
+            dbc.Col([html.H5('Ano: ' )]),
+            dcc.Dropdown(id = 'year_dropdown', options = year_options, value = year_options[-1]['value'], style={'width': '70%', 'margin-left':'30px'}),
+        ],width={"size": 2, "offset": 1}),
+        dbc.Col([
+            html.H5('Tipo de Gráfico: '),
+            dcc.RadioItems(id = 'graph_type',options = graph_type, value='Scatter', labelStyle={'display': 'inline-block', 'margin-left':'30px', 'margin-top':'15px'})
+        ], width={"size": 2, 'align': 'start'}),
+        dbc.Col([
+            html.H5('Climatologias(INMET):  '),
+            dcc.Dropdown(id = 'clima_dropdown', options = city_climatology, value=['(Clima)Salvador - 83229'], multi=True, style={'width': '80%', 'margin-left':'30px'})
+        ], width={"size": 4, "offset": 2})
+    ], justify="start"),
+    dbc.Row([
+        dbc.Col([
+            html.H5('Precipitação Observada (Estações) : '),
             dcc.Dropdown(id = 'stations_dropdown', options = city_options, value=['Salvador (J. Zoológico) - A401'], multi=True, style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' ')
-            ]),
+            ], width={"size": 5, "offset": 1} ),
         dbc.Col([
-            html.H4('Climatologias(INMET): ', style={ 'textAlign': 'center'}),
-            html.H1(' '),
-            html.H5('Município: '),
-            dcc.Dropdown(id = 'clima_dropdown', options = city_climatology, value=['(Clima)Salvador - 83229'], multi=True, style={'width': '70%', 'margin-left':'30px'}),
-            html.H1(' '),
-            html.H5('Tipo de Gráfico'),
-            dcc.RadioItems(id = 'graph_type',options = graph_type, value='Scatter', labelStyle={'display': 'inline-block'})
-            ])
+            html.H4(' ', style={ 'textAlign': 'center'}),
+            ], width={"size": 4, "offset": 1} )
     ]),
     dbc.Row([
         dbc.Col(html.H5(id= 'graph1_title', className="text-center"),
                 className="mt-4")]),
-    dcc.Graph(id='situation_graph_by_period'),
+    dcc.Graph(id='situation_graph_by_period', style={'margin-left':'70px', 'margin-right':'70px'}),
     dbc.Row([
         dbc.Col(html.H5('Tabela de Dados', className="text-center"),
                 className="mt-5")
@@ -104,35 +111,32 @@ layout = html.Div([
     dbc.Row([
         dbc.Col(html.Div(id='table1'))
     ]),
-    dbc.Row(html.H1(' ')),
+    dbc.Row(html.H1('------------------------------------------------------------------------------------------', style={ 'textAlign': 'center', "margin-top": "20px"}), justify='center'),
     dbc.Row([
-        dbc.Col(dbc.Card(html.H3("Precipitação Anual", className="text-center text-bold text-dark "), body=True, color="#c8c8c8"), 
-            className="mb-6")
+        dbc.Col(html.H1(children='Analise de Precipitação no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
+            className="mb-1"))
     ]),
     dbc.Row([html.H1(' ')]),
     dbc.Row([
         dbc.Col([
-            html.H4('Estações: ', style={ 'textAlign': 'center'}),
             html.H5('Escolha a Estação: '),
             dcc.Dropdown(id = 'stations_dropdown_anual', options = stations_options ,value='Salvador (J. Zoológico) - A401', style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' '),
             html.H5('Ano: ' ),
-            dcc.Dropdown(id = 'year_dropdown_anual', options = year_options, multi=True, value = [i.rstrip(".csv") for i in list_year][::-1]),
+            dcc.Dropdown(id = 'year_dropdown_anual', options = year_options, multi=True, value = [i.rstrip(".csv") for i in list_year][::-1], style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' '),
-            ]),
+            ], width={"size": 5, "offset": 1} ),
         dbc.Col([
-            html.H4('Climatologias(INMET): ', style={ 'textAlign': 'center'}),
             html.H1(' '),
-            html.H5('Município: '),
+            html.H5('Climatologias(INMET):  '),
             dcc.Dropdown(id = 'clima_dropdown_anual', options = city_climatology, value=['(Clima)Salvador - 83229'], multi=True, style={'width': '70%', 'margin-left':'30px'}),
-            html.H1(' '),
-            html.H5('Tipo de Gráfico'),
-            ]),
+
+            ], width={"size": 4, "offset": 1} ),
     ]),
     dbc.Row([
         dbc.Col(html.H5(id= 'graph2_title', className="text-center"),
                 className="mt-4")]),
-    dcc.Graph(id='situation_graph_by_year'),
+    dcc.Graph(id='situation_graph_by_year', style={'margin-left':'70px', 'margin-right':'70px'}),
     dbc.Row(dbc.Col([html.Img(src='data:image/png;base64,{}'.format(encoded_image1.decode()), height=90)],style={ 'textAlign': 'center'})),
     html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center'}),
 ])
@@ -193,7 +197,7 @@ def update_graph1(stations_value,clima_value,graph_type, df):
 
         t_2=0
         for j in clima_value:
-            df2 = df_clima[df_clima.index == j].iloc[:,5:-1].T
+            df2 = df_clima[df_clima.index == j].loc[:,8:-2].T
             trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = colors2[t_2]))
             t_2+=1
         data = trace_1
@@ -208,7 +212,7 @@ def update_graph1(stations_value,clima_value,graph_type, df):
 
         t_2=0
         for j in clima_value:
-            df2 = df_clima[df_clima.index == j].iloc[:,5:-1].T
+            df2 = df_clima[df_clima.index == j].iloc[:,8:-2].T
             trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = colors2[t_2]))
             t_2+=1
         data = trace_1
@@ -216,9 +220,10 @@ def update_graph1(stations_value,clima_value,graph_type, df):
     layout = go.Layout(
         yaxis={'title': "Precipitação (mm)"},
         barmode='stack',
-        paper_bgcolor = 'rgba(0,0,0,0)',
-        plot_bgcolor = 'rgba(0,0,0,0)',
-        template="seaborn",
+        paper_bgcolor = 'rgba(255, 255, 255,0.1)',
+        plot_bgcolor = 'rgba(255, 255, 255,0)',
+        template='simple_white',
+        font_color="rgba(224, 224, 224,1)",
         margin=dict(t=20)
     )
 
@@ -264,6 +269,39 @@ def update_memory_anual(station,years):
     data = dict(data)
     return data
 
+@app.callback(
+    Output('estacoes-maps', 'figure'),
+    Input('memory', 'data'),
+)
+
+def update_graph1(df):
+    df = pd.DataFrame.from_dict(df)
+    df_clima2 = climatology
+
+    df['Tipo'] = 'Precipitação Observada'
+    df_clima2['Tipo'] = 'Climatologia'
+
+    df_filtro1 = df[['estacao','municipio', 'latitude', 'longitude', 'Tipo']]
+    df_filtro2 = df_clima2[['nome_codigo','municipio', 'latitude', 'longitude', 'Tipo']]
+
+    df_filtro2.columns = ['estacao','municipio', 'latitude', 'longitude','Tipo']
+
+    df_filtrado = pd.concat([df_filtro1,df_filtro2])
+
+    points = px.scatter_mapbox(df_filtrado, lat="latitude", lon="longitude", color='Tipo', zoom=4.7 , text= 'municipio', hover_name='estacao', width=600, center=dict(lat=-12.91,lon=-41.68))
+
+    #points_clima = px.scatter_mapbox(climatology, lat="latitude", lon="longitude")
+    #zoom=4.5 , text= 'municipio', hover_name='nome_codigo')
+
+
+    figure_1 = go.Figure(data = points)
+    figure_1.update_layout()
+    #figure_1.update_traces(marker_symbol="circle", marker_colorscale= 'Bluered', marker_size = 9)
+    figure_1.update_layout(mapbox_style="open-street-map")
+    figure_1.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor='rgba(0,0,0,0)', font_color="gray")
+
+    return figure_1
+
 
 @app.callback(
     Output('situation_graph_by_year', 'figure'),
@@ -289,19 +327,20 @@ def update_graph2(station,years, stations_clima, df):
 
     t_2=0
     for j in stations_clima:
-        df2 = df_clima[df_clima.index == j].iloc[:,5:-1].T
+        df2 = df_clima[df_clima.index == j].iloc[:,9:-1].T
         trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = colors2[t_2]))
         t_2+=1
     data = trace_1
     
     layout = go.Layout(
-            yaxis={'title': "Precipitação (mm)"},
-            barmode='stack',
-            paper_bgcolor = 'rgba(0,0,0,0)',
-            plot_bgcolor = 'rgba(0,0,0,0)',
-            template="seaborn",
-            margin=dict(t=20)
-        )
+        yaxis={'title': "Precipitação (mm)"},
+        barmode='stack',
+        paper_bgcolor = 'rgba(255, 255, 255,0.1)',
+        plot_bgcolor = 'rgba(255, 255, 255,0)',
+        template='simple_white',
+        font_color="rgba(224, 224, 224,1)",
+        margin=dict(t=20)
+    )
 
     return  {'data': data, 'layout': layout}
 

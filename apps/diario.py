@@ -11,6 +11,7 @@ import os
 import pathlib
 from app import app
 
+app.config.external_stylesheets = [dbc.themes.FLATLY]
 
 PATH = pathlib.Path(__file__).parent
 diario_PATH = PATH.joinpath("../dados/diario").resolve()
@@ -31,7 +32,7 @@ list23 = os.listdir(dir23)
 number_files23 = len(list23)
 month_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in month_list[:number_files23]]
 
-tabela = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano_options[-1]['value'] + '/'+ month_options[-1]['value'] + '.csv')))
+tabela = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano_options[-1]['value'] + '/' + month_options[-1]['value'] + '.csv')))
 tab1 = tabela.iloc[:,:8]
 tab2 = tabela.iloc[:,8:].round(1)
 
@@ -114,7 +115,7 @@ def update_store(month1, ano):
     df = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano + "/" + month1 + ".csv")))
     dir = diario_PATH.joinpath(ano)
     tab1 = df.iloc[:,:8]
-    tab2 = df.iloc[:,8:].round(1)
+    tab2 = df.iloc[:,8:].apply(lambda x : x*1.0).round(1)
 
     df = pd.concat([tab1,tab2], axis=1)
     tabdict = dict(df)
@@ -225,13 +226,21 @@ def update_graph (selected_regiao, selected_date, df):
 
 def update_table (selected_regiao, selected_date, df):
     tabela = pd.DataFrame.from_dict(df)
+
+    tab1 = tabela.iloc[:,:8]
+    tab2 = tabela.iloc[:,8:].apply(lambda x : x*1.0).round(1)
+
+    tabela = pd.concat([tab1,tab2], axis=1)
+
     filtered_tabela = tabela[tabela['regiao']==selected_regiao]
 
     filtered_tabela = filtered_tabela[filtered_tabela[selected_date] > 0]
     filtered_tabela = filtered_tabela[['estacao',selected_date]]
     filtered_tabela = filtered_tabela.sort_values(selected_date, ascending=False)
+    filtered_tabela[selected_date] = filtered_tabela[selected_date].apply(lambda x : x*1.0).round(1)
 
     filtered_tabela.rename(columns= {'estacao': 'Nome da Estação', selected_date: selected_date.replace('_','/')}, inplace=True)
+
 
     total_col = int(filtered_tabela['Nome da Estação'].count())
     cont = int(total_col/3)

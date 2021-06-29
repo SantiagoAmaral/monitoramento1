@@ -27,7 +27,7 @@ card_content_bar = [
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div([
-        dbc.Row([html.A(dbc.Card(card_content_bar, color= '#adb9ca'),className="w-100 mb-3")], align="center", style={ 'textAlign': 'center'}),
+        dbc.Row([html.A(dbc.Card(card_content_bar, color= '#6cabab', outline=True),className="w-100 mb-3")], align="center", style={ 'textAlign': 'center'}),
     ]),
     html.Div(id='page-content')
 ])
