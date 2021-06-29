@@ -216,7 +216,6 @@ def update_graph1(stations_value,clima_value,graph_type, df):
     layout = go.Layout(
         yaxis={'title': "Precipitação (mm)"},
         barmode='stack',
-        width=1100,
         height=300,
         paper_bgcolor = 'rgba(255, 255, 255,0.1)',
         plot_bgcolor = 'rgba(255, 255, 255,0)',
@@ -240,13 +239,15 @@ def update_table1(dropdown1,dropdown2,df):
     filtered_table = pd.concat([tab_total.iloc[:,0:2],tab_total.iloc[:,6:]], axis=1)
     filtered_table.rename(columns={'municipio': 'Município', 'estacao': 'Estação'}, inplace=True)
 
-    df_clima = climatology
-    tab_filt_clima = df_clima.loc[df_clima['nome_codigo'].isin(dropdown2)]
+
+    df_clima_table = climatology
+    tab_filt_clima = df_clima_table.loc[df_clima_table['nome_codigo'].isin(dropdown2)]
     
-    filtered_clima = pd.concat([tab_filt_clima.loc[:,['municipio','nome_codigo']],tab_filt_clima.iloc[:,6:-1]], axis=1)
+    filtered_clima = pd.concat([tab_filt_clima.loc[:,['municipio','nome_codigo']],tab_filt_clima.iloc[:,8:-2]], axis=1)
     filtered_clima.rename(columns={'municipio': 'Município', 'nome_codigo': 'Estação'}, inplace=True)
 
     tabela_final = pd.concat([filtered_table,filtered_clima])
+    
     table1 = dbc.Table.from_dataframe(tabela_final, striped=True, bordered=True, hover=True, size = 'sm')
     return table1
 

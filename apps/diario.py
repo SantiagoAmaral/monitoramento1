@@ -115,7 +115,7 @@ def update_store(month1, ano):
     df = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano + "/" + month1 + ".csv")))
     dir = diario_PATH.joinpath(ano)
     tab1 = df.iloc[:,:8]
-    tab2 = df.iloc[:,8:].apply(lambda x : x*1.0).round(1)
+    tab2 = df.iloc[:,8:].round(1)
 
     df = pd.concat([tab1,tab2], axis=1)
     tabdict = dict(df)
@@ -235,6 +235,8 @@ def update_table (selected_regiao, selected_date, df):
     filtered_tabela = tabela[tabela['regiao']==selected_regiao]
 
     filtered_tabela = filtered_tabela[filtered_tabela[selected_date] > 0]
+
+    filtered_tabela[selected_date] = filtered_tabela[selected_date].map('{:,.2f}'.format)
     filtered_tabela = filtered_tabela[['estacao',selected_date]]
     filtered_tabela = filtered_tabela.sort_values(selected_date, ascending=False)
     filtered_tabela[selected_date] = filtered_tabela[selected_date].apply(lambda x : x*1.0).round(1)
