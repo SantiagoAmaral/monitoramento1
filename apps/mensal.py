@@ -69,7 +69,7 @@ layout = html.Div([
     dcc.Store(id='memory', storage_type='local'),
     dcc.Store(id='memory_anual', storage_type='local'),
     dbc.Row([ 
-            dbc.Col(html.H1(children='Analise de Precipitação no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
+            dbc.Col(html.H1(children='Analise de Precipitação Mensal no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
             className="mb-1"))
             ]),
     dbc.Row([html.H1(' ', style={"margin-top": "10px"})]),
@@ -113,7 +113,7 @@ layout = html.Div([
     ]),
     dbc.Row(html.H1('------------------------------------------------------------------------------------------', style={ 'textAlign': 'center', "margin-top": "20px"}), justify='center'),
     dbc.Row([
-        dbc.Col(html.H1(children='Analise de Precipitação no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
+        dbc.Col(html.H1(children='Analise de Precipitação Anual no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
             className="mb-1"))
     ]),
     dbc.Row([html.H1(' ')]),
