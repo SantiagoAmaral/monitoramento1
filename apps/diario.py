@@ -20,7 +20,7 @@ mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 
 
 
-dir_year = mensal_PATH
+dir_year = diario_PATH
 list_year = sorted(os.listdir(dir_year))
 number_files_year = len(list_year)
 ano_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in list_year]
@@ -228,7 +228,7 @@ def update_table (selected_regiao, selected_date, df):
     tabela = pd.DataFrame.from_dict(df)
 
     tab1 = tabela.iloc[:,:8]
-    tab2 = tabela.iloc[:,8:].apply(lambda x : x*1.0).round(1)
+    tab2 = tabela.iloc[:,8:].round(1)
 
     tabela = pd.concat([tab1,tab2], axis=1)
 
@@ -236,10 +236,10 @@ def update_table (selected_regiao, selected_date, df):
 
     filtered_tabela = filtered_tabela[filtered_tabela[selected_date] > 0]
 
-    filtered_tabela[selected_date] = filtered_tabela[selected_date].map('{:,.2f}'.format)
+    filtered_tabela[selected_date] = filtered_tabela[selected_date]
     filtered_tabela = filtered_tabela[['estacao',selected_date]]
     filtered_tabela = filtered_tabela.sort_values(selected_date, ascending=False)
-    filtered_tabela[selected_date] = filtered_tabela[selected_date].apply(lambda x : x*1.0).round(1)
+    filtered_tabela[selected_date] = filtered_tabela[selected_date]
 
     filtered_tabela.rename(columns= {'estacao': 'Nome da Estação', selected_date: selected_date.replace('_','/')}, inplace=True)
 

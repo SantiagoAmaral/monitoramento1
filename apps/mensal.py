@@ -258,15 +258,18 @@ def update_table1(dropdown1,dropdown2,df):
 )
 
 def update_memory_anual(station,years):
+    
     data = pd.DataFrame()
 
     for i in years[::-1]:
-        df_test2 = pd.DataFrame(pd.read_csv(mensal_PATH.joinpath(i + ".csv")))
+        df_test2 = pd.DataFrame(pd.read_csv('C:/Users/aliss/Desktop/Codigos/monitoramento1/dados/mensal/' + i + ".csv"))
+        if df_test2.loc[df_test2['estacao'].isin([station])].shape[0] == 0:
+            continue
         test_tab = df_test2.loc[df_test2['estacao'].isin([station])]
         test_tab = test_tab.assign(Ano = i)
         data[i] = test_tab.iloc[0,6:-1]
-    data = dict(data)
-    return data
+    data_dict = dict(data)
+    return data_dict
 
 @app.callback(
     Output('estacoes-maps', 'figure'),
@@ -327,6 +330,8 @@ def update_graph2(station,years, stations_clima, df):
 
     t_1 = 0
     for i in years:
+        if i not in df1.columns:
+            continue
         trace_1.append(go.Scatter(name=i, x=month_list, y=df1[i]))
         t_1+=1
 
