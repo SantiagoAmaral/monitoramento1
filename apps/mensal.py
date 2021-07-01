@@ -262,7 +262,7 @@ def update_memory_anual(station):
     list_year_anual = [i.rstrip(".csv") for i in list_year]
 
     for i in list_year_anual:
-        df_test2 = pd.DataFrame(pd.read_csv('C:/Users/aliss/Desktop/Codigos/monitoramento1/dados/mensal/' + i + ".csv"))
+        df_test2 = pd.DataFrame(pd.read_csv(mensal_PATH + i + ".csv"))
         if df_test2.loc[df_test2['estacao'].isin([station])].shape[0] == 0:
             continue
         test_tab = df_test2.loc[df_test2['estacao'].isin([station])]
