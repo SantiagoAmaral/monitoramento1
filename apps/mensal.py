@@ -158,8 +158,8 @@ def update_titles(year):
     Output('stations_dropdown_anual', 'options'),
     Input('memory', 'data')
 )
-def update_stations(df):
-    tabela = pd.DataFrame.from_dict(df)
+def update_stations(df6):
+    tabela = pd.DataFrame.from_dict(df6)
     city_options = [{'label':i, 'value':i} for i in sorted(tabela["estacao"].unique())]
     return city_options, city_options
 
@@ -232,8 +232,8 @@ def update_graph1(stations_value,clima_value,graph_type, df):
     Input('clima_dropdown', 'value'),
     Input('memory', 'data')]
 )
-def update_table1(dropdown1,dropdown2,df):
-    df = pd.DataFrame.from_dict(df)
+def update_table1(dropdown1,dropdown2,df5):
+    df = pd.DataFrame.from_dict(df5)
     tab_total = df.loc[df['estacao'].isin(dropdown1)]
 
     filtered_table = pd.concat([tab_total.iloc[:,0:2],tab_total.iloc[:,6:]], axis=1)
@@ -253,15 +253,15 @@ def update_table1(dropdown1,dropdown2,df):
 
 @app.callback(
     Output('memory_anual', 'data'),
-    [Input('stations_dropdown_anual', 'value'),
-    Input('year_dropdown_anual', 'value')]
+    Input('stations_dropdown_anual', 'value')
 )
 
-def update_memory_anual(station,years):
+def update_memory_anual(station):
     
     data = pd.DataFrame()
+    list_year_anual = [i.rstrip(".csv") for i in list_year]
 
-    for i in years[::-1]:
+    for i in list_year_anual:
         df_test2 = pd.DataFrame(pd.read_csv('C:/Users/aliss/Desktop/Codigos/monitoramento1/dados/mensal/' + i + ".csv"))
         if df_test2.loc[df_test2['estacao'].isin([station])].shape[0] == 0:
             continue
@@ -276,9 +276,9 @@ def update_memory_anual(station,years):
     Input('memory', 'data'),
 )
 
-def update_map1(df):
+def update_map1(df4):
 
-    df_map1 = pd.DataFrame.from_dict(df)
+    df_map1 = pd.DataFrame.from_dict(df4)
     df_clima2 = climatology
 
     df_map1['Tipo'] = 'Observada'
@@ -310,6 +310,16 @@ def update_map1(df):
 
     return figure_1
 
+@app.callback(
+    Output('year_dropdown_anual', 'options'),
+    Input('memory_anual', 'data')
+)
+
+def update_dropdownyearsanual(df3):
+    data_year3 = pd.DataFrame.from_dict(df3)
+    options_year_anual = [{'label': i, 'value': i} for i in data_year3.columns]
+
+    return options_year_anual
 
 @app.callback(
     Output('situation_graph_by_year', 'figure'),
@@ -322,6 +332,8 @@ def update_graph2(station,years, stations_clima, df):
     df1 = pd.DataFrame.from_dict(df)
     
     df_clima2 = climatology.set_index('nome_codigo')
+
+    anos = df1.columns
     
     colors = ['#05a0ff', '#ffbab1','#8cffab', '#f8f85c','#cb7bf9', '#00cbe5','#ff73dc', '#ffa860', '#b88459', '#8e3378']
     colors2 = ['#080808','#a7a7a7','#bea672', '#91c4c4', '#636771'] 
@@ -329,7 +341,7 @@ def update_graph2(station,years, stations_clima, df):
     trace_1 = []
 
     t_1 = 0
-    for i in years:
+    for i in anos:
         if i not in df1.columns:
             continue
         trace_1.append(go.Scatter(name=i, x=month_list, y=df1[i]))
