@@ -331,13 +331,15 @@ def update_map1(df4):
 
     df_filtrado = pd.concat([df_filtro1,df_filtro2])
 
-    points = px.scatter_mapbox(df_filtrado, lat="latitude", lon="longitude", color='Tipo', zoom=4.3 , text= 'municipio', hover_name = 'estacao', width=400, height=300, center=dict(lat=-13.20,lon=-41.75))
+    points = px.scatter_mapbox(df_filtrado, lat="latitude", lon="longitude", color='Tipo', zoom=4.3 , text= 'municipio', 
+                                hover_name = 'estacao', width=400, height=300, center=dict(lat=-13.20,lon=-41.75))
 
     #points_clima = px.scatter_mapbox(climatology, lat="latitude", lon="longitude")
     #zoom=4.5 , text= 'municipio', hover_name='nome_codigo')
 
 
     figure_1 = go.Figure(data = points)
+    figure_1.update_traces(mode="markers")
     figure_1.update_layout(legend=dict(
     yanchor="top",
     y=1.0,

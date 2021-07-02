@@ -1,10 +1,13 @@
+from _plotly_utils.colors import color_parser
 import pandas as pd
+from pandas.core.algorithms import mode
 import plotly.express as px
 import dash
 from dash.dependencies import Input, Output
 import dash_html_components as html
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
+from plotly.express import colors
 import plotly.graph_objects as go
 import base64
 import os
@@ -267,17 +270,22 @@ def update_maps(date,df):
     tabela = pd.DataFrame.from_dict(df)
     table_map = tabela
     sequential1 = ['#e0fefc', '#befefe','#73f1fd', '#11d4ff','#21b5fb', '#3698fd', '#4975f9', '#5c56f4', '#4e37e7', '#4217d6', '#390cc7', '#3300b8']
+
+    colors_m2 = ['#05a0ff', '#ffbab1','#8cffab', '#f8f85c','#cb7bf9', '#00cbe5','#ff73dc', '#ffa860']
     density = px.density_mapbox(table_map, lat="latitude", lon="longitude", z = date, radius=20 , zoom=4.5, height=400,
                                 color_continuous_scale= sequential1, range_color=[0,150], opacity=0.8, center=dict(lat=-12.91,lon=-41.68))
 
-    points = px.scatter_mapbox(table_map, lat="latitude", lon="longitude", zoom=4.5 ,color= date, text= 'municipio', hover_name='codigo',
-                                hover_data=["municipio", "nome_estacao"], height=400, color_continuous_scale=px.colors.diverging.Temps,
-                                center=dict(lat=-12.91,lon=-41.68))
+    points = px.scatter_mapbox(table_map, lat="latitude", lon="longitude", zoom=4.5 ,color= 'regiao', text= 'municipio', hover_name='codigo',
+                                hover_data=["municipio", "nome_estacao"], height=400, color_discrete_sequence=px.colors.qualitative.Antique,
+                                center=dict(lat=-13.21,lon=-40.10))
 
     figure_1 = go.Figure(data = points)
     figure_1.update_layout()
-    figure_1.update_traces(marker_symbol="circle", marker_colorscale= 'Bluered', marker_size = 9)
-    figure_1.update_layout(mapbox_style="open-street-map")
+    figure_1.update_traces(marker_symbol="circle", marker_size = 9, mode="markers")
+    figure_1.update_layout(mapbox_style="open-street-map", legend=dict(yanchor="bottom",
+                                                                        y=0.01,
+                                                                        xanchor="right",
+                                                                        x=1.0), )
     figure_1.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor='rgba(0,0,0,0)', font_color="gray")
 
     figure_2 = go.Figure(data=density)

@@ -62,6 +62,7 @@ layout = html.Div([
     dbc.Row([html.A('INMET - Instituto Nacional de Meteorologia',href = 'https://portal.inmet.gov.br/', target = '_blank')], justify='center'),
     dbc.Row([html.A('ANA - Agência Nacional de Águas',href = 'https://www.snirh.gov.br/hidroweb/apresentacao', target = '_blank'),
     ], justify='center'),
+    dbc.Row([html.A('COCEP - Coordenação de Estudos de Clima e Projetos Especiais', href = 'http://www.inema.ba.gov.br/monitoramento/indice-precipitacao/', target = '_blank')], justify='center'),
     dbc.Row(dbc.Col([html.Img(src='data:image/png;base64,{}'.format(encoded_image1.decode()), height=90)],style={ 'textAlign': 'center'})),
     html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center'})
 ])
