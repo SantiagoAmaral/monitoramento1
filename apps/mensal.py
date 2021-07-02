@@ -1,6 +1,8 @@
+from typing import Text
 from dash_bootstrap_components._components.Col import Col
 from dash_bootstrap_components._components.Row import Row
 import pandas as pd
+from pandas.core.reshape.concat import concat
 import plotly.express as px
 import dash
 from dash.dependencies import Input, Output
@@ -86,7 +88,7 @@ layout = html.Div([
                             ],width={"size": 3, 'align': 'center'}),
             dbc.Col([
                 html.H6('Climatologias(INMET):  ', style={ "margin-top": "10px"}),
-                dcc.Dropdown(id = 'clima_dropdown', options = city_climatology, value=['(Clima)Salvador - 83229'], multi=True, style={'width': '80%', 'margin-left':'10px'}),
+                dcc.Dropdown(id = 'clima_dropdown', options = city_climatology, value='(Clima)Salvador - 83229', style={'width': '80%', 'margin-left':'10px'}),
                 html.H6('Tipo de Gráfico: ', style={ "margin-top": "30px"}),
                 dcc.RadioItems(id = 'graph_type',options = graph_type, value='Scatter', labelStyle={'display': 'inline-block', 'margin-left':'30px', 'margin-top':'10px'})
                     ], width={"size": 4, 'align': 'center'},)
@@ -97,12 +99,19 @@ layout = html.Div([
             ]),
     dcc.Graph(id='situation_graph_by_period', style={'margin-left':'70px', 'margin-right':'70px'}),
     dbc.Row([
-        dbc.Col(html.H5('Tabela de Dados', className="text-center"),
+        dbc.Col(html.H5('Tabela de Dados', style={ 'textAlign': 'center', 'color': 'white'}),
                 className="mt-5")
-            ]),
+            ],justify='center'),
     dbc.Row([
-        dbc.Col(html.Div(id='table1'))
-            ]),
+        dbc.Col(html.Div(id='table1'),style={ 'textAlign': 'center'}, width={"size": 11})
+            ], justify='center'),
+    dbc.Row([
+        dbc.Col(html.H5('Anomalia de Precipitação', style={ 'textAlign': 'center', 'color': 'white'}),
+                )
+            ],justify='center'),
+    dbc.Row([
+        dbc.Col(html.Div(id='table2'),style={ 'textAlign': 'center'}, width={"size": 11})
+            ], justify='center'),
     dbc.Row(html.H1('----------------------------------------------------------------------------', style={ 'textAlign': 'center', "margin-top": "20px"}), justify='center'),
     dbc.Row([
         dbc.Col(html.H1(children='Analise de Precipitação Anual no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
@@ -171,45 +180,44 @@ def update_stations(df6):
     Input('memory', 'data')])
 
 def update_graph1(stations_value,clima_value,graph_type, df):
-    
-
     df_graph1 = pd.DataFrame.from_dict(df)
     df_graph1 = df_graph1.set_index('estacao')
 
     df_clima2 = climatology.set_index('nome_codigo')
 
-    colors = ['#05a0ff', '#ffbab1','#8cffab', '#f8f85c','#cb7bf9', '#00cbe5','#ff73dc', '#ffa860', '#b88459', '#8e3378']
-    colors2 = ['#080808','#a7a7a7','#bea672', '#91c4c4', '#636771']
-
+    #colors = ['#05a0ff', '#ffbab1','#8cffab', '#f8f85c','#cb7bf9', '#00cbe5','#ff73dc', '#ffa860', '#b88459', '#8e3378']
+    #colors2 = ['#080808','#a7a7a7','#bea672', '#91c4c4', '#636771']
     if graph_type == 'Bar':
         trace_1 = []
         t_1 = 0
         for i in stations_value:
+            if df_graph1.loc[df_graph1.index.isin([i])].shape[0] == 0:
+                continue
             df1 = df_graph1[df_graph1.index == i].iloc[:,5:].T
-            trace_1.append(go.Bar(name=i, x=df1.index, y=df1[i]))
+            trace_1.append(go.Bar(name=i, x=df1.index, y=df1[i], text=i))
             t_1+=1
 
-        t_2=0
-        for j in clima_value:
-                    
-            df2 = df_clima2[df_clima2.index == j].iloc[:,7:-2].T
-            trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = colors2[t_2]))
-            t_2+=1
+        j = clima_value
+        df2 = df_clima2[df_clima2.index == j].iloc[:,7:-2].T
+        trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = '#080808', text = j))
+
         data = trace_1
 
     if graph_type == 'Scatter':
         trace_1 = []
         t_1 = 0
         for i in stations_value:
+            if df_graph1.loc[df_graph1.index.isin([i])].shape[0] == 0:
+                continue
             df1 = df_graph1[df_graph1.index == i].iloc[:,5:].T
-            trace_1.append(go.Scatter(name=i, x=df1.index, y=df1[i]))
+            trace_1.append(go.Scatter(name=i, x=df1.index, y=df1[i], text=i))
             t_1+=1
 
-        t_2=0
-        for j in clima_value:
-            df2 = df_clima2[df_clima2.index == j].iloc[:,7:-2].T
-            trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = colors2[t_2]))
-            t_2+=1
+        
+        j = clima_value
+        df2 = df_clima2[df_clima2.index == j].iloc[:,7:-2].T
+        trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = '#080808', text = j))
+        
 
         data = trace_1
 
@@ -241,7 +249,7 @@ def update_table1(dropdown1,dropdown2,df5):
 
 
     df_clima_table = climatology
-    tab_filt_clima = df_clima_table.loc[df_clima_table['nome_codigo'].isin(dropdown2)]
+    tab_filt_clima = df_clima_table.loc[df_clima_table['nome_codigo'].isin([dropdown2])]
     
     filtered_clima = pd.concat([tab_filt_clima.loc[:,['municipio','nome_codigo']],tab_filt_clima.iloc[:,8:-2]], axis=1)
     filtered_clima.rename(columns={'municipio': 'Município', 'nome_codigo': 'Estação'}, inplace=True)
@@ -250,6 +258,38 @@ def update_table1(dropdown1,dropdown2,df5):
     
     table1 = dbc.Table.from_dataframe(tabela_final, striped=True, bordered=True, hover=True, size = 'sm')
     return table1
+
+@app.callback(
+    Output('table2','children'),
+    [Input('stations_dropdown', 'value'),
+    Input('clima_dropdown', 'value'),
+    Input('memory', 'data')]
+)
+
+
+def update_table2(stations_obs,station_clima,df7):
+    anual = pd.DataFrame.from_dict(df7)
+
+    stations = stations_obs
+
+    anual = anual.loc[anual['estacao'].isin(stations)]
+
+    anomalia = pd.DataFrame()
+
+    for i in anual.iloc[:,6:].columns:
+        select1 = anual.set_index('estacao')
+        select2 = climatology[climatology['nome_codigo'] == station_clima]
+        valor1 = select2[i].apply(lambda x: select1[i] - x)
+        anomalia[i] = valor1.iloc[0].round(1)
+    anomalia['Estação']=select1.index
+    anomalia['Município'] = select1['municipio']
+    anomalia = pd.concat([anomalia.iloc[:,[-1,-2]], anomalia.iloc[:,0:-2]], axis=1)
+
+    table2 = dbc.Table.from_dataframe(anomalia, striped=True, bordered=True, hover=True, size = 'sm')
+
+    return table2
+
+
 
 @app.callback(
     Output('memory_anual', 'data'),
