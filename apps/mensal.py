@@ -85,7 +85,7 @@ layout = html.Div([
                     dcc.Dropdown(id = 'year_dropdown', options = year_options, value = year_options[-1]['value'], 
                                 persistence=True,persistence_type='memory',style={'width': '60%', 'margin-left':'10px'}),
                     html.H6('Precipitação Observada: ', style={ "margin-top": "30px"}),
-                    dcc.Dropdown(id = 'stations_dropdown', options = city_options, value=['Salvador (J. Zoológico) - A401'], multi=True,
+                    dcc.Dropdown(id = 'stations_dropdown', options = city_options, value=['Salvador (J. Zoológico) - A401', 'Salvador (Ondina) - 83229'], multi=True,
                                 persistence=True,persistence_type='memory',style={'width': '100%', 'margin-left':'10px'}),        
                             ],width={"size": 3, 'align': 'center'}),
             dbc.Col([
@@ -102,14 +102,14 @@ layout = html.Div([
             ]),
     dcc.Graph(id='situation_graph_by_period', style={'margin-left':'70px', 'margin-right':'70px'}),
     dbc.Row([
-        dbc.Col(html.H5('Tabela de Dados', style={ 'textAlign': 'center', 'color': 'white'}),
+        dbc.Col(html.H5('Tabela de Dados(mm)', style={ 'textAlign': 'center', 'color': 'white'}),
                 className="mt-5")
             ],justify='center'),
     dbc.Row([
         dbc.Col(html.Div(id='table1'),style={ 'textAlign': 'center'}, width={"size": 11})
             ], justify='center'),
     dbc.Row([
-        dbc.Col(html.H5('Anomalia de Precipitação', style={ 'textAlign': 'center', 'color': 'white'}),
+        dbc.Col(html.H5('Anomalia de Precipitação(mm)', style={ 'textAlign': 'center', 'color': 'white'}),
                 )
             ],justify='center'),
     dbc.Row([
