@@ -82,13 +82,16 @@ layout = html.Div([
     dbc.Row([
             dbc.Col(dcc.Graph(id='estacoes-maps'), width={"size": 6 ,"offset": 1}, md=4),
             dbc.Col([html.H6('Ano: ', style={ "margin-top": "10px"}),
-                    dcc.Dropdown(id = 'year_dropdown', options = year_options, value = year_options[-1]['value'], style={'width': '60%', 'margin-left':'10px'}),
+                    dcc.Dropdown(id = 'year_dropdown', options = year_options, value = year_options[-1]['value'], 
+                                persistence=True,persistence_type='memory',style={'width': '60%', 'margin-left':'10px'}),
                     html.H6('Precipitação Observada: ', style={ "margin-top": "30px"}),
-                    dcc.Dropdown(id = 'stations_dropdown', options = city_options, value=['Salvador (J. Zoológico) - A401'], multi=True, style={'width': '100%', 'margin-left':'10px'}),        
+                    dcc.Dropdown(id = 'stations_dropdown', options = city_options, value=['Salvador (J. Zoológico) - A401'], multi=True,
+                                persistence=True,persistence_type='memory',style={'width': '100%', 'margin-left':'10px'}),        
                             ],width={"size": 3, 'align': 'center'}),
             dbc.Col([
                 html.H6('Climatologias(INMET):  ', style={ "margin-top": "10px"}),
-                dcc.Dropdown(id = 'clima_dropdown', options = city_climatology, value='(Clima)Salvador - 83229', style={'width': '80%', 'margin-left':'10px'}),
+                dcc.Dropdown(id = 'clima_dropdown', options = city_climatology, value='(Clima)Salvador - 83229', 
+                            persistence=True, persistence_type='memory',style={'width': '80%', 'margin-left':'10px'}),
                 html.H6('Tipo de Gráfico: ', style={ "margin-top": "30px"}),
                 dcc.RadioItems(id = 'graph_type',options = graph_type, value='Scatter', labelStyle={'display': 'inline-block', 'margin-left':'30px', 'margin-top':'10px'})
                     ], width={"size": 4, 'align': 'center'},)
@@ -122,16 +125,19 @@ layout = html.Div([
     dbc.Row([
         dbc.Col([
             html.H5('Escolha a Estação: '),
-            dcc.Dropdown(id = 'stations_dropdown_anual', options = stations_options ,value='Salvador (J. Zoológico) - A401', style={'width': '70%', 'margin-left':'30px'}),
+            dcc.Dropdown(id = 'stations_dropdown_anual', options = stations_options ,value='Salvador (J. Zoológico) - A401', 
+                        persistence=True, persistence_type='memory', style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' '),
             html.H5('Ano: ' ),
-            dcc.Dropdown(id = 'year_dropdown_anual', options = year_options, multi=True, value = [i.rstrip(".csv") for i in list_year][::-1], style={'width': '70%', 'margin-left':'30px'}),
+            dcc.Dropdown(id = 'year_dropdown_anual', options = year_options, multi=True, value = [i.rstrip(".csv") for i in list_year][::-1], 
+                        persistence=True, persistence_type='memory', style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' '),
                 ], width={"size": 5, "offset": 1} ),
         dbc.Col([
             html.H1(' '),
             html.H5('Climatologias(INMET):  '),
-            dcc.Dropdown(id = 'clima_dropdown_anual', options = city_climatology, value=['(Clima)Salvador - 83229'], multi=True, style={'width': '70%', 'margin-left':'30px'}),
+            dcc.Dropdown(id = 'clima_dropdown_anual', options = city_climatology, value=['(Clima)Salvador - 83229'], multi=True, 
+                        persistence=True, persistence_type='memory', style={'width': '70%', 'margin-left':'30px'}),
 
                 ], width={"size": 4, "offset": 1} ),
             ]),

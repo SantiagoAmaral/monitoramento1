@@ -58,11 +58,11 @@ layout = html.Div([
     dbc.Row(html.H1(' ', style={"margin-top": "10px"})),
     dbc.Row([html.H6('Fonte de dados: ', style={ 'textAlign': 'center',"margin-top": "50px"})], justify='center'),
     dbc.Row([html.A('INEMA - Instituto do Meio Ambiente e Recursos Hídricos - SEIA MONITORAMENTO', href = 'http://monitoramento.seia.ba.gov.br/', target = '_blank')], justify='center'),
+    dbc.Row([html.A('DIRAM/COCEP - Coordenação de Estudos de Clima e Projetos Especiais', href = 'http://www.inema.ba.gov.br/monitoramento/indice-precipitacao/', target = '_blank')], justify='center'),
     dbc.Row([html.A('CEMADEN - Centro Nacional de Monitoramento e Alertas de Desastres Naturais', href = 'http://www2.cemaden.gov.br/mapainterativo/#', target = '_blank')], justify='center'),
     dbc.Row([html.A('INMET - Instituto Nacional de Meteorologia',href = 'https://portal.inmet.gov.br/', target = '_blank')], justify='center'),
     dbc.Row([html.A('ANA - Agência Nacional de Águas',href = 'https://www.snirh.gov.br/hidroweb/apresentacao', target = '_blank'),
     ], justify='center'),
-    dbc.Row([html.A('COCEP - Coordenação de Estudos de Clima e Projetos Especiais', href = 'http://www.inema.ba.gov.br/monitoramento/indice-precipitacao/', target = '_blank')], justify='center'),
     dbc.Row(dbc.Col([html.Img(src='data:image/png;base64,{}'.format(encoded_image1.decode()), height=90)],style={ 'textAlign': 'center'})),
     html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center'})
 ])

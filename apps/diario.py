@@ -62,7 +62,7 @@ encoded_image1 = base64.b64encode(open(image_filename1, 'rb').read())
 layout = html.Div([
     dcc.Store(id='memory1', storage_type='local'),
     dbc.Row([ 
-            dbc.Col(html.H1(id = 'main_title', style={ 'textAlign': 'center'}), align='center')]),
+            dbc.Col(html.H1(id = 'main_title', style={ 'textAlign': 'center', 'color': 'white'}), align='center')]),
     html.P([
         html.A('SEIA Monitoramento',
         href = 'http://monitoramento.seia.ba.gov.br/',
@@ -73,28 +73,31 @@ layout = html.Div([
             html.H5('Quantidade de Estações'),
             html.Div(id = 'tabela-contagem'),
             html.H6(id = 'total-estações')
-        ], width="auto", style={ 'textAlign': 'center'}),
+        ], width="auto", style={ 'textAlign': 'center', }),
         dbc.Col(dcc.Graph(id ='density-graph'), width={"size": 5 ,"offset": 0}, md=4)
     ], justify="start"),
-        html.H3(id = 'graph_title', style={ 'textAlign': 'center'}),
+        html.H5(id = 'graph_title', style={ 'textAlign': 'center', 'color': 'white', "margin-top": "20px"}),
     dbc.Row([
         dbc.Col([
             html.H6('Ano: ' ),
-            dcc.Dropdown(id = 'Ano_dropdown', options = ano_options, value = ano_options[-1]['value']),
+            dcc.Dropdown(id = 'Ano_dropdown', options = ano_options, value = ano_options[-1]['value'],
+                        persistence=True, persistence_type='memory'),
             html.H1(' '),
             html.H6('Mês: ' ),
-            dcc.Dropdown(id = 'month_dropdown', options = month_options, value = month_options[-1]['value']),
+            dcc.Dropdown(id = 'month_dropdown', options = month_options, value = month_options[-1]['value'],
+                        persistence=True, persistence_type='memory'),
             html.H1(' '),
             html.H6('Selecione o dia ou Total'),
-            dcc.Dropdown(id = 'date_dropdown', options=date_options, value=date_options[-1]['value']),
+            dcc.Dropdown(id = 'date_dropdown', options=date_options, value=date_options[-1]['value'],
+                        persistence=True, persistence_type='memory'),
             html.H1(' '),
             html.H6('Regiões Climáticas: '),
-            dcc.Dropdown(id = 'regiao_dropdown', options = region_options, value= 'Recôncavo')
+            dcc.Dropdown(id = 'regiao_dropdown', options = region_options, value= 'Recôncavo',persistence=True, persistence_type='memory')
             ],width={"size": 1.5, "offset": 1}),
         dbc.Col(dcc.Graph(id = 'municipio-graph'), width={"size": 9 }),
     ], justify="start"),
 
-    html.H3(id = 'table_title', style={ 'textAlign': 'center'}),
+    html.H5(id = 'table_title', style={ 'textAlign': 'center', 'color': 'white', "margin-top": "20px"}),
     #dash_table.DataTable(
         #id='dados-info',
         #columns=[{'name': col, 'id': col} for col in tabela.columns]),
