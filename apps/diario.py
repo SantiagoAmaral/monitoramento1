@@ -1,4 +1,5 @@
 from _plotly_utils.colors import color_parser
+from dash_core_components.Graph import Graph
 import pandas as pd
 from pandas.core.algorithms import mode
 import plotly.express as px
@@ -104,7 +105,7 @@ layout = html.Div([
     dbc.Row([
         dbc.Col(html.Div(id ='dados-info1'), width={"size": 4, "offset": 0}),
         dbc.Col(html.Div(id ='dados-info2'), width={"size": 4, "offset": 0}),
-        dbc.Col(html.Div(id ='dados-info3'), width={"size": 4, "offset": 0} )
+        dbc.Col(html.Div(id ='dados-info3'), width={"size": 4, "offset": 0})
         ], justify="center"),
     dbc.Row(dbc.Col([html.Img(src='data:image/png;base64,{}'.format(encoded_image1.decode()), height=90)],style={ 'textAlign': 'center'})),
     html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center'})
