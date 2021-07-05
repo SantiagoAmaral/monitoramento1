@@ -97,7 +97,6 @@ layout = html.Div([
             ],width={"size": 1.5, "offset": 1}),
         dbc.Col(dcc.Graph(id = 'municipio-graph'), width={"size": 9 }),
     ], justify="start"),
-
     html.H5(id = 'table_title', style={ 'textAlign': 'center', 'color': 'white', "margin-top": "20px"}),
     #dash_table.DataTable(
         #id='dados-info',

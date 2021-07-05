@@ -380,8 +380,6 @@ def update_graph2(station,years, stations_clima, df):
     df1 = pd.DataFrame.from_dict(df)
     
     df_clima2 = climatology.set_index('nome_codigo')
-
-    anos = df1.columns
     
     colors = ['#05a0ff', '#ffbab1','#8cffab', '#f8f85c','#cb7bf9', '#00cbe5','#ff73dc', '#ffa860', '#b88459', '#8e3378']
     colors2 = ['#080808','#a7a7a7','#bea672', '#91c4c4', '#636771'] 
@@ -389,7 +387,7 @@ def update_graph2(station,years, stations_clima, df):
     trace_1 = []
 
     t_1 = 0
-    for i in anos:
+    for i in years:
         if i not in df1.columns:
             continue
         trace_1.append(go.Scatter(name=i, x=month_list, y=df1[i]))
