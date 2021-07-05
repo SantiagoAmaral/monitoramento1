@@ -1,6 +1,7 @@
 municipio,estacao,regiao,rpga,latitude,longitude,Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho
 Piatã,Piatã - A430,Chapada Diamantina,RPGA do Rio de Contas,-13.155999999999999,-41.773999999999994,117.61,122.0,30.41,37.81,15.2,14.4,0.0
 Iaçu,Iaçu - 51280000,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.762,-40.214,16.6,104.2,12.41,117.01,7.2,26.01,0.0
+Iacú,Iacú (Lagoa Bonita) - PG-PR-15,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.932,-40.226,19.0,132.2,33.0,161.0,4.4,16.8,0.0
 Iaçu,Iaçu (João Amaro) - PG-PR-16,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.8,-40.363,8.4,17.8,4.6,116.8,4.61,17.0,0.0
 Mucugê,Mucugê (Guiné) - PG-PR-24,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.772,-41.541000000000004,18.2,184.8,11.0,131.0,6.61,22.8,0.0
 Marcionílio Souza,Marcionílio Souza (Machado Portela) - PG-PR-26,Chapada Diamantina,RPGA do Rio Paraguaçu,-13.154000000000002,-40.768,18.8,20.4,15.61,160.2,1.2,5.4,0.0
@@ -51,6 +52,7 @@ Igrapiúna,Igrapiúna (Centro) - 291345701A,Recôncavo,RPGA do Recôncavo Sul,-1
 São Félix,São Félix - 292900801A,Recôncavo,RPGA do Rio Paraguaçu,-12.607000000000001,-38.97,39.0,21.6,39.6,196.21,93.81,120.61,45.6
 Simões Filho,Simões Filho (Góes Calmon) - 293070901A,Recôncavo,RPGA do Recôncavo Norte,-12.78,-38.353,114.01,90.2,37.4,310.41,156.4,157.2,62.2
 Amargosa,Amargosa - A434,Recôncavo,RPGA do Recôncavo Sul,-13.009,-39.617,52.41,105.4,59.81,175.4,29.6,54.0,1.21
+Salvador,Salvador (Ondina) - 83229,Recôncavo,RPGA do Recôncavo Norte,-13.005,-38.506,197.3,54.9,65.9,305.7,122.11,150.8,23.5
 Salvador,Salvador (São tomé de Paripe) - 292740806A,Recôncavo,RPGA do Recôncavo Norte,-12.796,-38.489000000000004,37.32,82.3,41.03,489.99,183.48,138.89,29.77
 Salvador,Salvador (Federação) - 292740803A,Recôncavo,RPGA do Recôncavo Norte,-13.001,-38.510999999999996,160.21,40.41,58.32,270.59,115.67,145.84,22.29
 Salvador,Salvador (Cabula) - 292740810A,Recôncavo,RPGA do Recôncavo Norte,-12.960999999999999,-38.461,154.17,48.65,44.72,323.1,176.97,149.03,28.64
