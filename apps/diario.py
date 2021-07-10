@@ -1,3 +1,4 @@
+# Imports
 from _plotly_utils.colors import color_parser
 from dash_core_components.Graph import Graph
 import pandas as pd
@@ -15,18 +16,21 @@ import os
 import pathlib
 from app import app
 
+#Themes of Dashboard
 app.config.external_stylesheets = [dbc.themes.FLATLY]
 
+
+#Directory where data is
 PATH = pathlib.Path(__file__).parent
 diario_PATH = PATH.joinpath("../dados/diario").resolve()
 tabela_PATH = PATH.joinpath("../dados/diario/2021").resolve()
 mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 
 
-
 dir_year = diario_PATH
 list_year = sorted(os.listdir(dir_year))
 number_files_year = len(list_year)
+
 ano_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in list_year]
 
 month_list = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
@@ -77,6 +81,10 @@ layout = html.Div([
         ], width="auto", style={ 'textAlign': 'center', }),
         dbc.Col(dcc.Graph(id ='density-graph'), width={"size": 5 ,"offset": 0}, md=4)
     ], justify="start"),
+    dbc.Row([
+        dbc.Col(html.H6(children= 'Última atualização: ' + date_options[-2]['value'].replace('_','/'), style={ 'textAlign': 'center'}), 
+                        width={"size": 12 ,"offset": 0}),
+            ]),
         html.H5(id = 'graph_title', style={ 'textAlign': 'center', 'color': 'white', "margin-top": "20px"}),
     dbc.Row([
         dbc.Col([

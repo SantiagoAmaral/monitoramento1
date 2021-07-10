@@ -14,7 +14,7 @@ encoded_image1 = base64.b64encode(open(image_filename1, 'rb').read())
 
 
 
-
+# Cards of home page
 card_content_diario = [
     dbc.CardBody(
         [
@@ -45,6 +45,8 @@ card_content_focos = [
     ]),
 ]
 
+
+# Layout
 layout = html.Div([
     dbc.Row([
         dbc.Col(html.H1('Monitoramento', style={ 'textAlign': 'center',"margin-top": "50px"}))

@@ -27,38 +27,26 @@ clima_PATH = PATH.joinpath("../dados").resolve()
 mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 diario_PATH = PATH.joinpath("../dados/diario").resolve()
 
-
 climatology = pd.DataFrame(pd.read_csv(clima_PATH.joinpath("climatologia2.csv")))
 
 
-
-rain_PATH = PATH.joinpath("../dados/diario/2021").resolve()
-rain = pd.read_csv(rain_PATH.joinpath("Junho.csv"))
-
-
-
-dir = PATH.joinpath("../dados/mensal").resolve()
-
-
-list = os.listdir(dir) # dir is your directory path
-number_files = len(list)
-
-dir_year = mensal_PATH
-list_year = sorted(os.listdir(dir_year))
-
+list_year = sorted(os.listdir(mensal_PATH))
 number_files_year = len(list_year)
 year_options = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in list_year]
-
 
 month_list = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
             "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
 
-city_options = [{'label':i, 'value':i} for i in rain["municipio"].unique()]
+dir_diario = diario_PATH.joinpath(year_options[-1]['value'])
+list_diario_2 = os.listdir(dir_diario)
+number_files_diario = len(list_diario_2)
+month_options2 = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in month_list[:number_files_diario]]
+
+rain = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(year_options[-1]['value'] + '/' + month_options2[-1]['value'] + '.csv')))
+
+date_options2 = [{ 'label': i, 'value': i} for i in rain.columns[8:]]
 
 city_climatology = [{'label':i, 'value':i} for i in sorted(climatology['nome_codigo'].unique())]
-
-stations_options = rain[rain['municipio']=='Salvador']
-stations_options = [{'label':i, 'value':i} for i in stations_options['estacao']]
 
 graph_type = [{'label': 'Barras', 'value': 'Bar'},
             {'label': 'Linhas', 'value': 'Scatter'}]
@@ -85,7 +73,7 @@ layout = html.Div([
                     dcc.Dropdown(id = 'year_dropdown', options = year_options, value = year_options[-1]['value'], 
                                 persistence=True,persistence_type='memory',style={'width': '60%', 'margin-left':'10px'}),
                     html.H6('Precipitação Observada: ', style={ "margin-top": "30px"}),
-                    dcc.Dropdown(id = 'stations_dropdown', options = city_options, value=['Salvador (J. Zoológico) - A401', 'Salvador (Ondina) - 83229'], multi=True,
+                    dcc.Dropdown(id = 'stations_dropdown', value=['Salvador (J. Zoológico) - A401', 'Salvador (Ondina) - 83229'], multi=True,
                                 persistence=True,persistence_type='memory',style={'width': '100%', 'margin-left':'10px'}),        
                             ],width={"size": 3, 'align': 'center'}),
             dbc.Col([
@@ -95,6 +83,10 @@ layout = html.Div([
                 html.H6('Tipo de Gráfico: ', style={ "margin-top": "30px"}),
                 dcc.RadioItems(id = 'graph_type',options = graph_type, value='Scatter', labelStyle={'display': 'inline-block', 'margin-left':'30px', 'margin-top':'10px'})
                     ], width={"size": 4, 'align': 'center'},)
+            ]),
+    dbc.Row([
+        dbc.Col(html.H6(children= 'Última atualização: ' + date_options2[-2]['value'].replace('_','/'), style={ 'textAlign': 'end'}), 
+                        width={"size": 11 ,"offset": 0}),
             ]),
     dbc.Row([
         dbc.Col(html.H5(id= 'graph1_title', className="text-center", style={ 'textAlign': 'center', 'color': 'white', 'margin-top': '0px'}),
@@ -125,7 +117,7 @@ layout = html.Div([
     dbc.Row([
         dbc.Col([
             html.H5('Escolha a Estação: '),
-            dcc.Dropdown(id = 'stations_dropdown_anual', options = stations_options ,value='Salvador (J. Zoológico) - A401', 
+            dcc.Dropdown(id = 'stations_dropdown_anual',value='Salvador (J. Zoológico) - A401', 
                         persistence=True, persistence_type='memory', style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' '),
             html.H5('Ano: ' ),
@@ -302,16 +294,16 @@ def update_table2(stations_obs,station_clima,df7):
     Input('stations_dropdown_anual', 'value')
 )
 
-def update_memory_anual(station):
+def update_memory_anual(station_anual):
     
     data = pd.DataFrame()
     list_year_anual = [i.rstrip(".csv") for i in list_year]
 
     for i in list_year_anual:
         df_test2 = pd.DataFrame(pd.read_csv(mensal_PATH.joinpath( i + ".csv")))
-        if df_test2.loc[df_test2['estacao'].isin([station])].shape[0] == 0:
+        if df_test2.loc[df_test2['estacao'].isin([station_anual])].shape[0] == 0:
             continue
-        test_tab = df_test2.loc[df_test2['estacao'].isin([station])]
+        test_tab = df_test2.loc[df_test2['estacao'].isin([station_anual])]
         test_tab = test_tab.assign(Ano = i)
         data[i] = test_tab.iloc[0,6:-1]
     data_dict = dict(data)
