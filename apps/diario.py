@@ -60,10 +60,6 @@ contagem_estacoes = tabela.groupby('regiao')['nome_estacao'].agg({'count'})
 contagem_estacoes = pd.DataFrame(contagem_estacoes).reset_index()
 contagem_total = contagem_estacoes['count'].sum()
 
-img_PATH = PATH.joinpath("../img").resolve()
-image_filename1 = img_PATH.joinpath('logo_santiago.png')
-encoded_image1 = base64.b64encode(open(image_filename1, 'rb').read())
-
 layout = html.Div([
     dcc.Store(id='memory1', storage_type='local'),
     dbc.Row([ 
@@ -114,7 +110,6 @@ layout = html.Div([
         dbc.Col(html.Div(id ='dados-info2'), width={"size": 4, "offset": 0}),
         dbc.Col(html.Div(id ='dados-info3'), width={"size": 4, "offset": 0})
         ], justify="center"),
-    dbc.Row(dbc.Col([html.Img(src='data:image/png;base64,{}'.format(encoded_image1.decode()), height=90)],style={ 'textAlign': 'center'})),
     html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center'})
 ])
 

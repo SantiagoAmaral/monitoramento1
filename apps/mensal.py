@@ -1,3 +1,8 @@
+
+#Monthly page
+#written by Alisson Santiago
+
+#import all libraries
 from typing import Text
 from dash_bootstrap_components._components.Col import Col
 from dash_bootstrap_components._components.Row import Row
@@ -10,7 +15,6 @@ import dash_html_components as html
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
-import base64
 import os
 import pathlib
 from app import app
@@ -18,17 +22,17 @@ from app import app
 
 
 
-# meta_tags are required for the app layout to be mobile responsive
-
+# app config
 app.config.external_stylesheets = [dbc.themes.SLATE]
 
+#PATHs where the data is.
 PATH = pathlib.Path(__file__).parent
 clima_PATH = PATH.joinpath("../dados").resolve()
 mensal_PATH = PATH.joinpath("../dados/mensal").resolve()
 diario_PATH = PATH.joinpath("../dados/diario").resolve()
 
+#Climatology data
 climatology = pd.DataFrame(pd.read_csv(clima_PATH.joinpath("climatologia2.csv")))
-
 
 list_year = sorted(os.listdir(mensal_PATH))
 number_files_year = len(list_year)
@@ -44,29 +48,27 @@ month_options2 = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i 
 
 rain = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(year_options[-1]['value'] + '/' + month_options2[-1]['value'] + '.csv')))
 
+#Dictionaries for options
 date_options2 = [{ 'label': i, 'value': i} for i in rain.columns[8:]]
-
 city_climatology = [{'label':i, 'value':i} for i in sorted(climatology['nome_codigo'].unique())]
-
 graph_type = [{'label': 'Barras', 'value': 'Bar'},
             {'label': 'Linhas', 'value': 'Scatter'}]
-
 research_type = [{'label': 'Por Ano', 'value': 'Ano'},
             {'label': 'Por Estação', 'value': 'Estação'}]
 
-img_PATH = PATH.joinpath("../img").resolve()
-image_filename1 = img_PATH.joinpath('logo_santiago.png')
-encoded_image1 = base64.b64encode(open(image_filename1, 'rb').read())
-
+# Dash layout
 layout = html.Div([
+    # Data Stores
     dcc.Store(id='memory', storage_type='local'),
     dcc.Store(id='memory_anual', storage_type='local'),
+            # Titles
     dbc.Row([
             dbc.Col(html.H1(children='Analise de Precipitação Mensal no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
             className="mb-1"))
             ]),
     dbc.Row([html.H1(' ', style={"margin-top": "10px"})
             ]),
+            #Dropdowns years and stations
     dbc.Row([
             dbc.Col(dcc.Graph(id='estacoes-maps'), width={"size": 6 ,"offset": 1}, md=4),
             dbc.Col([html.H6('Ano: ', style={ "margin-top": "10px"}),
@@ -76,6 +78,7 @@ layout = html.Div([
                     dcc.Dropdown(id = 'stations_dropdown', value=['Salvador (J. Zoológico) - A401', 'Salvador (Ondina) - 83229'], multi=True,
                                 persistence=True,persistence_type='memory',style={'width': '100%', 'margin-left':'10px'}),        
                             ],width={"size": 3, 'align': 'center'}),
+            #Dropdowns climatology Stations and Graph Type
             dbc.Col([
                 html.H6('Climatologias(INMET):  ', style={ "margin-top": "10px"}),
                 dcc.Dropdown(id = 'clima_dropdown', options = city_climatology, value='(Clima)Salvador - 83229', 
@@ -88,11 +91,13 @@ layout = html.Div([
         dbc.Col(html.H6(children= 'Última atualização: ' + date_options2[-2]['value'].replace('_','/'), style={ 'textAlign': 'end'}), 
                         width={"size": 11 ,"offset": 0}),
             ]),
+            #Graph1
     dbc.Row([
         dbc.Col(html.H5(id= 'graph1_title', className="text-center", style={ 'textAlign': 'center', 'color': 'white', 'margin-top': '0px'}),
                 className="mt-4")
             ]),
     dcc.Graph(id='situation_graph_by_period', style={'margin-left':'70px', 'margin-right':'70px'}),
+        #Data Table
     dbc.Row([
         dbc.Col(html.H5('Tabela de Dados(mm)', style={ 'textAlign': 'center', 'color': 'white'}),
                 className="mt-5")
@@ -100,6 +105,7 @@ layout = html.Div([
     dbc.Row([
         dbc.Col(html.Div(id='table1'),style={ 'textAlign': 'center'}, width={"size": 11})
             ], justify='center'),
+        #anomaly table
     dbc.Row([
         dbc.Col(html.H5('Anomalia de Precipitação(mm)', style={ 'textAlign': 'center', 'color': 'white'}),
                 )
@@ -108,12 +114,14 @@ layout = html.Div([
         dbc.Col(html.Div(id='table2'),style={ 'textAlign': 'center'}, width={"size": 11})
             ], justify='center'),
     dbc.Row(html.H1('----------------------------------------------------------------------------', style={ 'textAlign': 'center', "margin-top": "20px"}), justify='center'),
+    #Data from every year
     dbc.Row([
         dbc.Col(html.H1(children='Analise de Precipitação Anual no Estado da Bahia', style={ 'textAlign': 'center', 'color': 'white'}, 
             className="mb-1"))
             ]),
     dbc.Row([html.H1(' ')
             ]),
+    # Dropdowns stations and years
     dbc.Row([
         dbc.Col([
             html.H5('Escolha a Estação: '),
@@ -125,6 +133,7 @@ layout = html.Div([
                         persistence=True, persistence_type='memory', style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' '),
                 ], width={"size": 5, "offset": 1} ),
+    #Dropdown climatology Stations
         dbc.Col([
             html.H1(' '),
             html.H5('Climatologias(INMET):  '),
@@ -138,20 +147,23 @@ layout = html.Div([
                 className="mt-4")
                 ]),
     dcc.Graph(id='situation_graph_by_year', style={'margin-left':'70px', 'margin-right':'70px'}),
-    dbc.Row(dbc.Col([html.Img(src='data:image/png;base64,{}'.format(encoded_image1.decode()), height=90)],style={ 'textAlign': 'center'})),
-    html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center'}),
+    html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center', "margin-top": "30px"}),
 ])
 
+
+#Callbacks and Functions
+
+#Update store memory
 @app.callback(
     Output('memory', 'data'),
     Input('year_dropdown', 'value')
 )
 def update_store(ano):
-
     df = pd.DataFrame(pd.read_csv(mensal_PATH.joinpath(ano + ".csv")))
     tabdict = dict(df)
     return tabdict
 
+#Update graph title1
 @app.callback(
     Output('graph1_title', 'children'),
     Input('year_dropdown', 'value')
@@ -160,6 +172,7 @@ def update_titles(year):
     graph1_title = 'Gráfico de Precipitação -' + year + '- X Climatologia(INMET)'
     return graph1_title
 
+#Update dropdowns - stations and yearly stations
 @app.callback(
     Output('stations_dropdown', 'options'),
     Output('stations_dropdown_anual', 'options'),
@@ -170,6 +183,7 @@ def update_stations(df6):
     city_options = [{'label':i, 'value':i} for i in sorted(tabela["estacao"].unique())]
     return city_options, city_options
 
+#Update Graph1
 @app.callback(
     Output('situation_graph_by_period', 'figure'),
     [Input('stations_dropdown', 'value'),
@@ -229,9 +243,9 @@ def update_graph1(stations_value,clima_value,graph_type, df):
         font_color="rgba(224, 224, 224,1)",
         margin=dict(t=20)
     )
-
     return  {'data': data, 'layout': layout}
 
+#Update table1
 @app.callback(
     Output('table1','children'),
     [Input('stations_dropdown', 'value'),
@@ -257,13 +271,13 @@ def update_table1(dropdown1,dropdown2,df5):
     table1 = dbc.Table.from_dataframe(tabela_final, striped=True, bordered=True, hover=True, size = 'sm')
     return table1
 
+#Update table2
 @app.callback(
     Output('table2','children'),
     [Input('stations_dropdown', 'value'),
     Input('clima_dropdown', 'value'),
     Input('memory', 'data')]
 )
-
 
 def update_table2(stations_obs,station_clima,df7):
     anual = pd.DataFrame.from_dict(df7)
@@ -288,7 +302,7 @@ def update_table2(stations_obs,station_clima,df7):
     return table2
 
 
-
+#Update store memory2
 @app.callback(
     Output('memory_anual', 'data'),
     Input('stations_dropdown_anual', 'value')
@@ -309,6 +323,7 @@ def update_memory_anual(station_anual):
     data_dict = dict(data)
     return data_dict
 
+#Update stations map
 @app.callback(
     Output('estacoes-maps', 'figure'),
     Input('memory', 'data'),
@@ -332,9 +347,6 @@ def update_map1(df4):
     points = px.scatter_mapbox(df_filtrado, lat="latitude", lon="longitude", color='Tipo', zoom=4.3 , text= 'municipio', 
                                 hover_name = 'estacao', width=400, height=300, center=dict(lat=-13.20,lon=-41.75))
 
-    #points_clima = px.scatter_mapbox(climatology, lat="latitude", lon="longitude")
-    #zoom=4.5 , text= 'municipio', hover_name='nome_codigo')
-
 
     figure_1 = go.Figure(data = points)
     figure_1.update_traces(mode="markers")
@@ -350,6 +362,7 @@ def update_map1(df4):
 
     return figure_1
 
+#Update yearly dropdown options
 @app.callback(
     Output('year_dropdown_anual', 'options'),
     Input('memory_anual', 'data')
@@ -361,6 +374,7 @@ def update_dropdownyearsanual(df3):
 
     return options_year_anual
 
+#Update graph2 
 @app.callback(
     Output('situation_graph_by_year', 'figure'),
     Input('stations_dropdown_anual', 'value'),

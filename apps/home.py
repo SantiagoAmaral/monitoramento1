@@ -7,12 +7,6 @@ import base64
 import pathlib
 from app import app
 
-PATH = pathlib.Path(__file__).parent
-img_PATH = PATH.joinpath("../img").resolve()
-image_filename1 = img_PATH.joinpath('logo_santiago.png')
-encoded_image1 = base64.b64encode(open(image_filename1, 'rb').read())
-
-
 
 # Cards of home page
 card_content_diario = [
@@ -65,6 +59,5 @@ layout = html.Div([
     dbc.Row([html.A('INMET - Instituto Nacional de Meteorologia',href = 'https://portal.inmet.gov.br/', target = '_blank')], justify='center'),
     dbc.Row([html.A('ANA - Agência Nacional de Águas',href = 'https://www.snirh.gov.br/hidroweb/apresentacao', target = '_blank'),
     ], justify='center'),
-    dbc.Row(dbc.Col([html.Img(src='data:image/png;base64,{}'.format(encoded_image1.decode()), height=90)],style={ 'textAlign': 'center'})),
-    html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center'})
+    html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center', "margin-top": "40px"})
 ])
