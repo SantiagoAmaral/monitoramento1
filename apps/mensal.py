@@ -3,11 +3,7 @@
 #written by Alisson Santiago
 
 #import all libraries
-from typing import Text
-from dash_bootstrap_components._components.Col import Col
-from dash_bootstrap_components._components.Row import Row
 import pandas as pd
-from pandas.core.reshape.concat import concat
 import plotly.express as px
 import dash
 from dash.dependencies import Input, Output
