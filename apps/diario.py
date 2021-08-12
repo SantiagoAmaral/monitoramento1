@@ -346,7 +346,7 @@ def update_store2(month_diario, ano_diario):
 
 def update_graph_diario(memory_df, station_value, month_name,year_name):
     i = station_value
-    graph_title_2 = 'Gráfico de Precipitação por Estação - ' + month_name +'/' + year_name + ' - ' +  station_value
+    graph_title_2 = 'Gráfico de Precipitação diária por Estação - ' + month_name +'/' + year_name + ' - ' +  station_value
     df_diario = pd.DataFrame.from_dict(memory_df)
 
     df_diario1 = df_diario.set_index('estacao')
