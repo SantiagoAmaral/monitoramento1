@@ -1,17 +1,12 @@
 # Imports
-from _plotly_utils.colors import color_parser
-from dash_core_components.Graph import Graph
 import pandas as pd
-from pandas.core.algorithms import mode
 import plotly.express as px
 import dash
 from dash.dependencies import Input, Output
 import dash_html_components as html
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
-from plotly.express import colors
 import plotly.graph_objects as go
-import base64
 import os
 import pathlib
 from app import app
@@ -62,6 +57,7 @@ contagem_total = contagem_estacoes['count'].sum()
 
 layout = html.Div([
     dcc.Store(id='memory1', storage_type='local'),
+    dcc.Store(id='memory_diario', storage_type= 'local'),
     dbc.Row([ 
             dbc.Col(html.H1(id = 'main_title', style={ 'textAlign': 'center', 'color': 'white'}), align='center')]),
     html.P([
@@ -86,18 +82,16 @@ layout = html.Div([
         dbc.Col([
             html.H6('Ano: ' ),
             dcc.Dropdown(id = 'Ano_dropdown', options = ano_options, value = ano_options[-1]['value'],
-                        persistence=True, persistence_type='memory'),
-            html.H1(' '),
+                        persistence=True, persistence_type='memory', style={'margin-bottom':'20px'}),
             html.H6('Mês: ' ),
             dcc.Dropdown(id = 'month_dropdown', options = month_options, value = month_options[-1]['value'],
-                        persistence=True, persistence_type='memory'),
-            html.H1(' '),
+                        persistence=True, persistence_type='memory', style={'margin-bottom':'20px'}),
             html.H6('Selecione o dia ou Total'),
             dcc.Dropdown(id = 'date_dropdown', options=date_options, value=date_options[-1]['value'],
-                        persistence=True, persistence_type='memory'),
-            html.H1(' '),
+                        persistence=True, persistence_type='memory', style={'margin-bottom':'20px'}),
             html.H6('Regiões Climáticas: '),
-            dcc.Dropdown(id = 'regiao_dropdown', options = region_options, value= 'Recôncavo',persistence=True, persistence_type='memory')
+            dcc.Dropdown(id = 'regiao_dropdown', options = region_options, value= 'Recôncavo',
+                        persistence=True, persistence_type='memory', style={'margin-bottom':'20px'})
             ],width={"size": 1.5, "offset": 1}),
         dbc.Col(dcc.Graph(id = 'municipio-graph'), width={"size": 9 }),
     ], justify="start"),
@@ -110,6 +104,21 @@ layout = html.Div([
         dbc.Col(html.Div(id ='dados-info2'), width={"size": 4, "offset": 0}),
         dbc.Col(html.Div(id ='dados-info3'), width={"size": 4, "offset": 0})
         ], justify="center"),
+    dbc.Row(html.H5(id = 'graph_title_2', style={ 'textAlign': 'center', 'color': 'white', "margin-top": "30px"}), justify='center'),
+    dbc.Row([
+        dbc.Col([
+            html.H6('Ano: ' ),
+            dcc.Dropdown(id = 'Ano_dropdown_diario', options = ano_options, value = ano_options[-1]['value'],
+                        persistence=True, persistence_type='memory', style={'width': '100%', 'margin-bottom':'20px'}),
+            html.H6('Mês: ' ),
+            dcc.Dropdown(id = 'month_dropdown_diario', options = month_options, value = month_options[-1]['value'],
+                        persistence=True, persistence_type='memory', style={'width': '100%', 'margin-bottom':'20px'}),
+            html.H6('Estação'),
+            dcc.Dropdown(id = 'station_dropdown_diario', value="Salvador (Ondina) - 83229",
+                        persistence=True, persistence_type='memory', style={'width': '100%', 'margin-bottom':'10px'}),
+            ],width={"size": 2, "offset": 1}),
+        dbc.Col(dcc.Graph(id = 'municipio-graph_2'), width={"size": 9 }),
+        ], justify='center'),
     html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center'})
 ])
 
@@ -299,3 +308,60 @@ def update_maps(date,df):
     figure_2.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor='rgba(0,0,0,0)',font_color="gray")
 
     return figure_1, figure_2
+
+@app.callback(
+    Output('memory_diario', 'data'),
+    Output('month_dropdown_diario', 'options'),
+    Output('station_dropdown_diario', 'options'),
+    Input('month_dropdown_diario', 'value'),
+    Input('Ano_dropdown_diario', 'value')
+)
+
+def update_store2(month_diario, ano_diario):
+    df = pd.DataFrame(pd.read_csv(diario_PATH.joinpath(ano_diario + "/" + month_diario + ".csv")))
+    dir = diario_PATH.joinpath(ano_diario)
+    tab1 = df.iloc[:,:8]
+    tab2 = df.iloc[:,8:].round(1)
+
+    df = pd.concat([tab1,tab2], axis=1)
+    tabdict2 = dict(df)
+
+    list = os.listdir(dir)
+    number_files = len(list)
+
+    month_list = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+    month_options2 = [{'label': i.rstrip(".csv") , 'value': i.rstrip(".csv")} for i in month_list[:number_files]]
+
+    stations_diario = [{'label': i , 'value': i} for i in df['estacao']]
+    return tabdict2, month_options2, stations_diario
+
+@app.callback(
+    Output('municipio-graph_2', 'figure'),
+    Output('graph_title_2', 'children'),
+    Input('memory_diario', 'data'),
+    Input('station_dropdown_diario', 'value'),
+    Input('month_dropdown_diario', 'value'),
+    Input('Ano_dropdown_diario', 'value')
+)
+
+def update_graph_diario(memory_df, station_value, month_name,year_name):
+    i = station_value
+    graph_title_2 = 'Gráfico de Precipitação por Estação - ' + month_name +'/' + year_name + ' - ' +  station_value
+    df_diario = pd.DataFrame.from_dict(memory_df)
+
+    df_diario1 = df_diario.set_index('estacao')
+    df_diario2 = df_diario1[df_diario1.index == i].iloc[:,7:-1].T
+
+
+    fig_Bar_2 = px.bar(x=df_diario2.index, y=df_diario2[i], opacity=0.7,
+                        text=list(df_diario2[i]), template='simple_white')
+    fig_Bar_2.update_layout(
+        yaxis={'title': "Precipitação (mm)"},
+        paper_bgcolor = "rgba(0,0,0,0)",
+        plot_bgcolor = 'rgba(0,0,0,0)',
+        font_color="gray",
+        margin=dict(l=50, r=50, t=30, b=30)
+    )
+
+
+    return fig_Bar_2, graph_title_2
