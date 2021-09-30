@@ -15,7 +15,7 @@ Jacobina,Jacobina (Itapeipu) - IT-PR-34,Nordeste,RPGA do Rio Itapicuru,-11.316,-
 Senhor do Bonfim,Senhor do Bonfim (Carrapichel) - IT-PR-37,Nordeste,RPGA do Rio Itapicuru,-10.388,-40.22,2.8,50.2,17.6,45.4,0.2,2.0,0.0,0.0,4.8
 Uauá,Uauá (Fazenda Boa Vista) - IT-PR-18,Nordeste,RPGA do Rio Itapicuru,-10.059,-39.706,29.8,86.0,5.8,125.0,23.6,10.4,49.2,5.2,0.0
 Ribeira do Pombal,Ribeira do Pombal (Curral Falso) - IT-PR-01,Nordeste,RPGA do Rio Itapicuru,-10.698,-38.571,12.8,36.0,21.0,136.2,59.61,41.2,104.4,14.4,8.4
-Ribeira do Amparo,Ribeira do Amparo (Boa Hora) - IT-PR-13,Nordeste,RPGA do Rio Itapicuru,-10.965,-38.523,50.4,12.4,11.61,110.0,61.2,29.2,9.01,0.8,11.21
+Ribeira do Amparo,Ribeira do Amparo (Boa Hora) - IT-PR-13,Nordeste,RPGA do Rio Itapicuru,-10.965,-38.523,50.4,12.4,11.61,110.0,61.2,29.2,9.01,0.8,12.21
 Jeremoabo,Jeremoabo - A450,Nordeste,RPGA do Rio Vaza-Barris,-10.081,-38.346,7.61,38.6,6.0,127.4,74.6,46.01,76.6,9.4,13.4
 Juazeiro,Juazeiro (Itaberaba) - 291840701A,Norte,RPGA dos Rios Macururé e Curaçá,-9.448,-40.485,24.0,79.6,18.2,83.61,0.0,1.4,1.0,0.2,0.0
 Juazeiro,Juazeiro (Maria Gorete) - 291840703A,Norte,RPGA dos Rios Macururé e Curaçá,-9.42,-40.499,32.0,84.2,13.8,74.4,0.0,1.4,1.0,0.0,0.0
@@ -23,37 +23,37 @@ Juazeiro,Juazeiro (João Paulo II) - 291840704A,Norte,RPGA dos Rios Macururé e 
 Lapão,Lapão - 291915701A,Norte,RPGA dos Rios Verde e Jacaré,-11.38,-41.83,20.4,104.8,8.61,113.8,0.8,0.4,0.0,0.0,0.0
 América Dourada,América Dourada (Centro) - 290115501A,Norte,RPGA dos Rios Verde e Jacaré,-11.45,-41.434,12.0,129.6,6.0,63.6,0.8,0.0,0.0,0.0,0.0
 Irecê,Irecê - A424,Norte,RPGA dos Rios Verde e Jacaré,-11.329,-41.865,19.8,83.01,4.81,85.0,0.6,0.0,0.0,0.0,0.0
-Ibipeba,Ibipeba - VJ-CL-02,Norte,RPGA dos Rios Verde e Jacaré,-11.627,-42.064,23.8,139.01,15.6,52.6,0.0,2.4,0.0,0.0,0.0
+Ibipeba,Ibipeba - VJ-CL-02,Norte,RPGA dos Rios Verde e Jacaré,-11.627,-42.064,23.8,139.01,15.6,52.6,0.0,2.4,0.0,0.0,0.2
 Cocos,Cocos (Fazenda Santa Luzia) - CA-CL-01,Oeste,RPGA do Rio Carinhanha,-14.855,-45.936,205.4,388.21,72.4,169.01,0.0,9.4,0.0,0.0,0.0
 Correntina,Correntina (Fazenda Morinaga) - CT-CL-01,Oeste,"RPGA do Rio Corrente e Riachos do Ramalho, Serra Dourada e Brejo Velho",-13.752,-45.87,139.8,296.8,46.2,82.2,0.0,0.0,0.0,0.0,0.4
-Salvador,Salvador (J. Zoológico) - A401,Recôncavo,RPGA do Recôncavo Norte,-13.006,-38.506,189.2,52.0,62.8,286.6,119.01,110.81,211.6,38.6,36.6
-Salvador,Salvador (Periperi) - 292740820A,Recôncavo,RPGA do Recôncavo Norte,-12.867,-38.458,58.21,67.61,97.4,410.0,225.6,116.01,278.21,43.0,34.8
-Salvador,Salvador (Mussurunga) - 292740821A,Recôncavo,RPGA do Recôncavo Norte,-12.908,-38.44,141.01,61.8,57.0,408.2,135.2,94.21,242.4,23.0,40.4
+Salvador,Salvador (J. Zoológico) - A401,Recôncavo,RPGA do Recôncavo Norte,-13.006,-38.506,189.2,52.0,62.8,286.6,119.01,110.81,211.6,38.6,37.4
+Salvador,Salvador (Periperi) - 292740820A,Recôncavo,RPGA do Recôncavo Norte,-12.867,-38.458,58.21,67.61,97.4,410.0,225.6,116.01,278.21,43.0,35.2
+Salvador,Salvador (Mussurunga) - 292740821A,Recôncavo,RPGA do Recôncavo Norte,-12.908,-38.44,141.01,61.8,57.0,408.2,135.2,94.21,242.4,23.0,40.8
 Salvador,Salvador (Itapuã) - 292740819A,Recôncavo,RPGA do Recôncavo Norte,-12.948,-38.37,123.61,31.6,88.2,365.2,127.6,79.21,168.4,21.8,37.0
 Salvador,Salvador (Estação Rádio Marinha) - A456,Recôncavo,RPGA do Recôncavo Norte,-12.808,-38.496,33.6,54.6,47.0,533.2,200.0,129.61,231.4,28.6,49.0
-Cachoeira,Cachoeira - 290490201A,Recôncavo,RPGA do Rio Paraguaçu,-12.608,-38.961,37.6,11.0,39.8,210.0,110.81,117.8,296.2,52.0,46.81
+Cachoeira,Cachoeira - 290490201A,Recôncavo,RPGA do Rio Paraguaçu,-12.608,-38.961,37.6,11.0,39.8,210.0,110.81,117.8,296.2,52.0,47.2
 Igrapiúna,Igrapiúna (Centro) - 291345701A,Recôncavo,RPGA do Recôncavo Sul,-13.819,-39.142,194.01,91.8,79.4,272.6,64.0,106.21,89.61,10.6,55.61
 São Félix,São Félix - 292900801A,Recôncavo,RPGA do Rio Paraguaçu,-12.607,-38.97,39.0,21.6,39.6,196.21,93.81,95.4,245.4,40.6,28.6
 Simões Filho,Simões Filho (Góes Calmon) - 293070901A,Recôncavo,RPGA do Recôncavo Norte,-12.78,-38.353,114.01,90.2,37.4,310.41,156.4,119.81,319.2,36.6,44.2
 Amargosa,Amargosa - A434,Recôncavo,RPGA do Recôncavo Sul,-13.009,-39.617,52.41,105.4,59.81,175.4,29.6,44.8,48.2,2.81,19.4
-Salvador,Salvador (São tomé de Paripe) - 292740806A,Recôncavo,RPGA do Recôncavo Norte,-12.796,-38.489,37.32,82.3,41.03,489.99,183.48,118.36,206.06,16.91,36.66
-Salvador,Salvador (Federação) - 292740803A,Recôncavo,RPGA do Recôncavo Norte,-13.001,-38.511,160.21,40.41,58.32,270.59,115.67,113.74,208.25,35.05,36.45
-Salvador,Salvador (Cabula) - 292740810A,Recôncavo,RPGA do Recôncavo Norte,-12.961,-38.461,154.17,48.65,44.72,323.1,176.97,106.49,218.94,30.94,8.3
-Salvador,Salvador (Águas Claras) - 292740808A,Recôncavo,RPGA do Recôncavo Norte,-12.894,-38.442,84.39,79.72,57.97,325.9,179.05,115.51,204.03,37.24,38.45
-Salvador,Salvador (Cosme de Farias) - 292740816A,Recôncavo,RPGA do Recôncavo Norte,-12.979,-38.486,183.76,30.72,48.68,258.22,154.41,120.75,274.12,68.93,57.83
+Salvador,Salvador (São tomé de Paripe) - 292740806A,Recôncavo,RPGA do Recôncavo Norte,-12.796,-38.489,37.32,82.3,41.03,489.99,183.48,118.36,206.06,16.91,37.45
+Salvador,Salvador (Federação) - 292740803A,Recôncavo,RPGA do Recôncavo Norte,-13.001,-38.511,160.21,40.41,58.32,270.59,115.67,113.74,208.25,35.05,37.05
+Salvador,Salvador (Cabula) - 292740810A,Recôncavo,RPGA do Recôncavo Norte,-12.961,-38.461,154.17,48.65,44.72,323.1,176.97,106.49,218.94,30.94,8.5
+Salvador,Salvador (Águas Claras) - 292740808A,Recôncavo,RPGA do Recôncavo Norte,-12.894,-38.442,84.39,79.72,57.97,325.9,179.05,115.51,204.03,37.24,38.84
+Salvador,Salvador (Cosme de Farias) - 292740816A,Recôncavo,RPGA do Recôncavo Norte,-12.979,-38.486,183.76,30.72,48.68,258.22,154.41,120.75,274.12,68.93,58.62
 Salvador,Salvador (São Caetano) - 292740814A,Recôncavo,RPGA do Recôncavo Norte,-12.94,-38.475,131.48,46.29,54.04,283.73,154.77,76.41,216.9,36.06,31.35
-Salvador,Salvador (Rio Sena) - 292740805A,Recôncavo,RPGA do Recôncavo Norte,-12.891,-38.471,77.57,87.15,66.23,364.09,184.07,119.42,261.46,36.65,49.31
-Salvador,Salvador (Valéria) - 292740817A,Recôncavo,RPGA do Recôncavo Norte,-12.864,-38.438,59.76,80.93,73.92,405.7,203.01,120.22,286.79,24.06,34.14
+Salvador,Salvador (Rio Sena) - 292740805A,Recôncavo,RPGA do Recôncavo Norte,-12.891,-38.471,77.57,87.15,66.23,364.09,184.07,119.42,261.46,36.65,49.71
+Salvador,Salvador (Valéria) - 292740817A,Recôncavo,RPGA do Recôncavo Norte,-12.864,-38.438,59.76,80.93,73.92,405.7,203.01,120.22,286.79,24.06,34.34
 Candeias,Candeias (Santa Terezinha) - 290650105A,Recôncavo,RPGA do Recôncavo Norte,-12.647,-38.539,37.98,31.12,46.8,279.08,158.8,85.71,153.73,20.31,31.73
 Candeias,Candeias (Centro) - 290650101A,Recôncavo,RPGA do Recôncavo Norte,-12.67,-38.544,59.53,40.95,38.55,146.8,210.08,64.44,64.2,31.17,31.26
 Candeias,Candeias (Sarandi) - 290650104A,Recôncavo,RPGA do Recôncavo Norte,-12.671,-38.531,52.21,34.33,49.38,354.04,208.09,117.74,188.33,22.87,46.15
-Lauro de Freitas,Lauro de Freitas (Areia Branca) - 291920706A,Recôncavo,RPGA do Recôncavo Norte,-12.841,-38.337,58.12,44.85,50.92,364.41,107.96,105.31,358.25,28.7,29.49
+Lauro de Freitas,Lauro de Freitas (Areia Branca) - 291920706A,Recôncavo,RPGA do Recôncavo Norte,-12.841,-38.337,58.12,44.85,50.92,364.41,107.96,105.31,358.25,28.7,29.69
 Lauro de Freitas,Lauro de Freitas (Itinga 02) - 291920704A,Recôncavo,RPGA do Recôncavo Norte,-12.89,-38.353,74.75,52.12,33.93,288.5,112.29,76.76,205.82,16.94,23.92
 Lauro de Freitas,Lauro de Freitas (Vila Praiana) - 291920702A,Recôncavo,RPGA do Recôncavo Norte,-12.901,-38.308,120.72,62.45,59.95,233.08,110.33,69.45,239.02,14.19,29.8
-Lauro de Freitas,Lauro de Freitas (Rua 02 de Julho) - 291920705A,Recôncavo,RPGA do Recôncavo Norte,-12.839,-38.35,66.13,58.28,64.42,365.35,169.15,87.82,343.37,25.62,38.74
+Lauro de Freitas,Lauro de Freitas (Rua 02 de Julho) - 291920705A,Recôncavo,RPGA do Recôncavo Norte,-12.839,-38.35,66.13,58.28,64.42,365.35,169.15,87.82,343.37,25.62,39.52
 Gandú,Gandú (Dois de Julho) - 291120401A,Recôncavo,RPGA do Recôncavo Sul,-13.741,-39.483,147.06,46.56,79.0,150.44,13.85,68.25,39.14,2.21,31.59
-Valença,Valença (Rua São Roque) - 293290301A,Recôncavo,RPGA do Recôncavo Sul,-13.363,-39.078,213.08,104.06,104.37,330.65,77.12,131.81,161.26,27.11,31.22
-Lauro de Freitas,Lauro de Freitas - RN-CL-09,Recôncavo,RPGA do Recôncavo Norte,-12.887,-38.297,134.0,56.6,50.2,257.0,95.81,108.61,221.6,21.0,12.21
+Valença,Valença (Rua São Roque) - 293290301A,Recôncavo,RPGA do Recôncavo Sul,-13.363,-39.078,213.08,104.06,104.37,330.65,77.12,131.81,161.26,27.11,32.2
+Lauro de Freitas,Lauro de Freitas - RN-CL-09,Recôncavo,RPGA do Recôncavo Norte,-12.887,-38.297,134.0,56.6,50.2,257.0,95.81,108.61,221.6,21.0,12.6
 Simões Filho,Simões Filho (CIA) - 293070902A,Recôncavo,RPGA do Recôncavo Norte,-12.825,-38.409,74.21,54.8,49.2,488.21,201.4,122.81,310.21,24.0,41.4
 Itiruçu,Itiruçu - A407,Sudoeste,RPGA do Recôncavo Sul,-13.526,-40.121,35.8,61.2,40.81,74.81,25.2,46.41,115.4,7.2,16.0
 Jaguaquara,Jaguaquara (Lagoa) - 291760701A,Sudoeste,RPGA do Recôncavo Sul,-13.523,-39.969,26.4,73.0,34.2,135.2,18.6,25.6,26.4,6.4,12.0
@@ -67,7 +67,7 @@ Barra do Rocha,Barra do Rocha - 290310201A,Sul,RPGA do Rio de Contas,-14.209,-39
 Guaratinga,Guaratinga (Novo Horizonte) - 291180801A,Sul,"RPGA dos Rios dos Frades, Buranhém e Santo Antônio",-16.583,-39.781,64.81,105.0,34.8,97.4,13.8,32.2,32.6,0.6,46.81
 Itamaraju,Itamaraju (Centro) - 291560101A,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",-17.028,-39.535,12.2,100.2,55.6,104.0,57.4,54.2,22.4,0.61,116.61
 Pau Brasil,Pau Brasil - 292390201A,Sul,RPGA do Rio Pardo,-15.461,-39.652,37.21,38.6,20.8,100.4,22.2,87.81,22.6,2.0,27.2
-Santa Luzia,Santa Luzia (Centro) - 292805901A,Sul,RPGA do Leste,-15.43,-39.333,157.21,215.4,71.6,119.6,41.4,69.01,27.21,0.4,50.4
+Santa Luzia,Santa Luzia (Centro) - 292805901A,Sul,RPGA do Leste,-15.43,-39.333,157.21,215.4,71.6,119.6,41.4,69.01,27.21,0.4,50.6
 Camacan,Camacan (Centro) - 290560201A,Sul,RPGA do Rio Pardo,-15.422,-39.495,72.14,96.23,40.17,91.14,28.72,57.19,27.81,3.98,14.74
 Camacan,Camacan (São João do Panelinha) - 290560202A,Sul,RPGA do Rio Pardo,-15.375,-39.49,85.06,120.92,26.22,128.85,29.69,84.97,38.84,3.38,53.46
 Camacan,Camacan (Centro) - 290560203A,Sul,RPGA do Rio Pardo,-15.416,-39.494,74.99,100.39,34.69,85.73,23.89,116.18,28.77,4.76,35.77
