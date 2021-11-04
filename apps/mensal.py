@@ -121,7 +121,7 @@ layout = html.Div([
     dbc.Row([
         dbc.Col([
             html.H5('Escolha a Estação: '),
-            dcc.Dropdown(id = 'stations_dropdown_anual',value='(Clima)Salvador - 83229', 
+            dcc.Dropdown(id = 'stations_dropdown_anual',value='Salvador (Ondina) - 83229', 
                         persistence=True, persistence_type='memory', style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' '),
             html.H5('Ano: ' ),
