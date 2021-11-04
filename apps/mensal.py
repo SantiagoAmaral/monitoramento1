@@ -71,7 +71,7 @@ layout = html.Div([
                     dcc.Dropdown(id = 'year_dropdown', options = year_options, value = year_options[-1]['value'], 
                                 persistence=True,persistence_type='memory',style={'width': '60%', 'margin-left':'10px'}),
                     html.H6('Precipitação Observada: ', style={ "margin-top": "30px"}),
-                    dcc.Dropdown(id = 'stations_dropdown', value=['Salvador (J. Zoológico) - A401', 'Salvador (Ondina) - 83229'], multi=True,
+                    dcc.Dropdown(id = 'stations_dropdown', value=['Salvador (Ondina) - 83229'], multi=True,
                                 persistence=True,persistence_type='memory',style={'width': '100%', 'margin-left':'10px'}),        
                             ],width={"size": 3, 'align': 'center'}),
             #Dropdowns climatology Stations and Graph Type
@@ -121,7 +121,7 @@ layout = html.Div([
     dbc.Row([
         dbc.Col([
             html.H5('Escolha a Estação: '),
-            dcc.Dropdown(id = 'stations_dropdown_anual',value='Salvador (J. Zoológico) - A401', 
+            dcc.Dropdown(id = 'stations_dropdown_anual',value='(Clima)Salvador - 83229', 
                         persistence=True, persistence_type='memory', style={'width': '70%', 'margin-left':'30px'}),
             html.H1(' '),
             html.H5('Ano: ' ),
