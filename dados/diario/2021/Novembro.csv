@@ -18,6 +18,7 @@ Piritiba,PG-PR-07,Piritiba,Piritiba - PG-PR-07,-11.733137,-40.562306,Chapada Dia
 Baixa Grande,PG-PR-08,Baixa Grande,Baixa Grande - PG-PR-08,-11.908701,-40.183683,Chapada Diamantina,RPGA do Rio Paraguaçu,0.0,0.0,0.4,0.0,7.4,0.0,9.4,22.2,39.41
 Tapiramutá,PG-PR-09,Tapiramutá,Tapiramutá - PG-PR-09,-11.838502,-40.791761,Chapada Diamantina,RPGA do Rio Paraguaçu,0.0,0.0,2.4,4.8,6.0,0.6,41.8,29.4,85.0
 Ventura,PG-PR-10,Morro do Chapéu,Morro do Chapéu (Ventura) - PG-PR-10,-11.650911,-40.951765,Chapada Diamantina,RPGA do Rio Paraguaçu,0.0,0.0,10.0,47.6,34.6,3.4,14.2,60.2,170.0
+Piatã,CO-CL-04,Piatã,Piatã - CO-CL-04,-13.164166,-41.770833,Chapada Diamantina,RPGA do Rio de Contas,0.0,0.0,3.75,0.25,18.5,4.5,3.25,17.5,47.75
 Centro,291900901A,Lajedinho,Lajedinho (Centro) - 291900901A,-12.35585,-40.90228,Chapada Diamantina,RPGA do Rio Paraguaçu,0.6,0.0,1.4,0.6,24.8,0.4,15.0,58.8,101.6
 Fazenda Terra Grapiúna,PG-FR-04,Wagner,Wagner (Fazenda Terra Grapiúna) - PG-FR-04,-12.181482,-41.150663,Chapada Diamantina,RPGA do Rio Paraguaçu,0.0,0.0,1.6,12.6,34.6,1.2,29.2,11.8,91.0
 Cipó,83192,Cipó,Cipó - 83192,-11.083333,-38.516667,Nordeste,RPGA do Rio Itapicuru,0.0,0.5,0.0,0.6,15.0,0.2,65.4,0.0,81.7
@@ -127,6 +128,8 @@ Recreio,293330702A,Vitória da Conquista,Vitória da Conquista (Recreio) - 29333
 Patagônia,293330704A,Vitória da Conquista,Vitória da Conquista (Patagônia) - 293330704A,-14.87,-40.863,Sudoeste,RPGA do Rio Pardo,0.0,0.0,12.02,0.0,24.01,31.29,0.2,10.24,77.76
 Barcelar,293330705A,Vitória da Conquista,Vitória da Conquista (Barcelar) - 293330705A,-14.838,-40.856,Sudoeste,RPGA do Rio Pardo,0.0,0.0,7.87,1.02,29.54,32.9,0.0,12.83,84.16
 Lomantão,293330703A,Vitória da Conquista,Vitória da Conquista (Lomantão) - 293330703A,-14.87,-40.827,Sudoeste,RPGA do Rio Pardo,1.77,0.0,8.65,0.2,21.25,21.08,0.2,1.97,55.12
+Jaguaquara,RS-CL-01,Jaguaquara,Jaguaquara - RS-CL-01,-13.573055,-39.940833,Sudoeste,RPGA do Recôncavo Sul,0.5,0.0,0.0,0.25,71.75,21.5,4.0,37.0,135.0
+Vitória da Conquista,PA-CL-01,Vitória da Conquista,Vitória da Conquista - PA-CL-01,-14.886111,-40.800833,Sudoeste,RPGA do Rio Pardo,0.0,0.25,10.25,0.5,27.75,41.5,0.0,0.0,80.25
 Fz Nanci,53880000,Camacã,Camacã (Fz Nanci) - 53880000,-15.581395,-39.521095,Sul,RPGA do Rio Pardo,2.0,0.0,6.6,2.0,6.8,19.2,0.2,1.2,38.0
 PCH Cach. da Lixa M,55354000,Jucuruçu,Jucuruçu (PCH Cach. da Lixa M) - 55354000,-17.06703,-40.068619,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",0.2,3.4,4.6,11.2,0.0,9.2,0.0,0.0,28.6
 PCH Colino II M,55355600,Vereda,Vereda (PCH Colino II M) - 55355600,-17.07126,-40.15474,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",1.5,4.25,12.75,11.25,0.25,37.0,0.0,0.0,67.0
@@ -142,6 +145,7 @@ Pau Brasil,292390201A,Pau Brasil,Pau Brasil - 292390201A,-15.46122,-39.65225,Sul
 Centro,292805901A,Santa Luzia,Santa Luzia (Centro) - 292805901A,-15.42976,-39.332759,Sul,RPGA do Leste,0.4,1.0,1.2,1.8,5.0,11.6,0.2,0.4,21.6
 Mascote,53950000,Mascote,Mascote - 53950000,-15.565561,-39.302756,Sul,RPGA do Rio Pardo,0.2,0.2,3.0,0.8,3.8,0.8,1.6,2.0,12.4
 PCH Colino I J,55357000,Jucuruçu,Jucuruçu (PCH Colino I J) - 55357000,-17.0822,-40.0772,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",0.0,3.25,6.0,3.0,1.0,12.5,0.5,0.0,26.25
+Eunápolis,FB-CL-01,Eunápolis,Eunápolis - FB-CL-01,-16.290555,-39.579722,Sul,"RPGA dos Rios dos Frades, Buranhém e Santo Antônio",1.25,1.25,6.0,57.0,5.0,4.0,0.0,0.0,74.5
 Centro,290560201A,Camacan,Camacan (Centro) - 290560201A,-15.422225,-39.494984,Sul,RPGA do Rio Pardo,1.58,0.59,3.16,4.59,6.6,13.98,1.8,2.2,34.5
 Centro,290340901A,Belmonte,Belmonte (Centro) - 290340901A,-15.859179,-38.878025,Sul,RPGA do Rio Jequitinhonha,0.0,1.97,4.57,9.06,0.6,26.79,0.0,0.0,42.99
 São João do Panelinha,290560202A,Camacan,Camacan (São João do Panelinha) - 290560202A,-15.375278,-39.489984,Sul,RPGA do Rio Pardo,0.0,7.67,2.98,0.6,6.53,13.6,0.0,7.5,38.88
