@@ -1,4 +1,6 @@
 municipio,estacao,regiao,rpga,latitude,longitude,Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro
+Lençóis,Lençóis - 83242,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.5575,-41.388889,37.2,69.31,37.8,185.5,13.2,52.91,24.4,54.7,3.6,269.71,334.1,380.0
+Morro do Chapéu,Morro do Chapéu - 83184,Chapada Diamantina,RPGA do Rio Salitre,-11.216667,-41.216667,18.2,114.9,6.3,112.1,17.6,25.91,20.5,27.5,3.0,94.0,175.4,107.1
 Iaçu,Iaçu - 51280000,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.7622,-40.2136,16.6,104.2,12.41,117.01,7.2,26.01,11.4,9.4,10.6,43.8,328.01,26.8
 Iacú,Iacú (Lagoa Bonita) - PG-PR-15,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.931506,-40.226468,19.0,132.2,33.0,161.0,4.4,16.8,9.4,15.4,6.6,28.6,292.8,26.6
 Iaçu,Iaçu (João Amaro) - PG-PR-16,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.800391,-40.363139,8.4,17.8,4.6,116.8,4.61,17.0,3.6,18.21,6.2,326.5,268.4,19.8
@@ -34,6 +36,7 @@ Correntina,Correntina (PCH Pres. Goulart-J) - 45600000,Oeste,"RPGA do Rio Corren
 Salvador,Salvador (Periperi) - 292740820A,Recôncavo,RPGA do Recôncavo Norte,-12.867344,-38.458111,58.21,67.61,97.4,410.0,225.6,153.8,311.6,159.4,35.2,56.4,176.2,107.81
 Salvador,Salvador (Mussurunga) - 292740821A,Recôncavo,RPGA do Recôncavo Norte,-12.907733,-38.440111,141.01,61.8,57.0,408.2,135.2,182.21,258.0,182.41,40.8,59.81,210.4,119.01
 Salvador,Salvador (Itapuã) - 292740819A,Recôncavo,RPGA do Recôncavo Norte,-12.947736,-38.370136,123.61,31.6,88.2,365.2,127.6,128.21,180.6,146.8,37.0,61.81,239.21,104.61
+Salvador,Salvador (Ondina) - 83229,Recôncavo,RPGA do Recôncavo Norte,-13.005278,-38.505833,161.7,54.9,65.9,305.7,123.61,150.8,263.0,182.0,37.8,152.1,316.0,176.01
 Salvador,Salvador (São tomé de Paripe) - 292740806A,Recôncavo,RPGA do Recôncavo Norte,-12.795508,-38.489389,37.32,82.3,41.03,489.99,183.48,138.89,218.9,85.6,37.45,43.95,128.26,92.58
 Salvador,Salvador (Federação) - 292740803A,Recôncavo,RPGA do Recôncavo Norte,-13.000791,-38.511056,160.21,40.41,58.32,270.59,115.67,145.84,247.65,180.66,37.05,127.98,275.65,153.18
 Salvador,Salvador (Cabula) - 292740810A,Recôncavo,RPGA do Recôncavo Norte,-12.961347,-38.460778,154.17,48.65,44.72,323.1,176.97,149.03,246.9,178.41,8.5,136.62,211.09,95.34
@@ -59,6 +62,7 @@ Nova Viçosa,Nova Viçosa (Centro) - 292300102A,Sul,"RPGA dos Rios Peruípe, Ita
 Itapebi,Itapebi (Jusante) - 54945000,Sul,RPGA do Rio Jequitinhonha,-15.949206,-39.5225,64.0,61.4,15.0,79.8,17.0,101.61,44.2,132.8,77.61,73.0,172.21,122.6
 Itabuna,Itabuna (Ferradas) - 53170000,Sul,RPGA do Leste,-14.8439,-39.3311,162.21,101.41,67.0,86.8,19.8,66.21,34.2,58.21,71.81,99.2,207.8,167.0
 Morpará,Morpará - 46360000,São Francisco,RPGA dos Rios Paramirim e Santo Onofre,-11.5583,-43.2825,60.4,306.4,26.6,30.4,2.6,2.0,0.2,0.0,2.6,90.0,108.01,117.6
+Bom Jesus da Lapa,Bom Jesus da Lapa - 83288,São Francisco,RPGA do Rio Carnaíba de Dentro,-13.251389,-43.405278,154.7,163.4,18.5,114.7,0.0,0.0,0.0,0.0,0.0,2.6,132.3,105.1
 Cotegipe,Cotegipe (Faz. Macambira) - 46675000,São Francisco,RPGA do Rio Grande,-11.6106,-44.1567,38.61,131.2,47.8,48.8,0.0,0.0,0.0,0.0,0.0,58.2,205.4,117.0
 Paratinga,Paratinga (Volta da Serra) - CD-CL-02,São Francisco,RPGA do Rio Carnaíba de Dentro,-12.57591,-43.12782,69.8,121.61,6.4,98.2,1.21,0.0,0.61,2.0,0.61,45.2,154.8,66.4
 Xique-Xique,Xique-Xique - PM-CL-05,São Francisco,RPGA dos Rios Paramirim e Santo Onofre,-10.82519,-42.68914,41.9,151.61,45.2,58.0,0.0,0.0,0.0,0.0,0.0,63.6,104.21,80.4
