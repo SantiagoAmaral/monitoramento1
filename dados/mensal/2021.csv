@@ -1,68 +1,66 @@
-municipio,estacao,regiao,rpga,latitude,longitude,Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro
-Lençóis,Lençóis - 83242,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.5575,-41.388889,37.2,69.31,37.8,185.5,13.2,52.91,24.4,54.7,3.6,269.71,334.1,380.0
-Morro do Chapéu,Morro do Chapéu - 83184,Chapada Diamantina,RPGA do Rio Salitre,-11.216667,-41.216667,18.2,114.9,6.3,112.1,17.6,25.91,20.5,27.5,3.0,94.0,175.4,107.1
-Iaçu,Iaçu - 51280000,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.7622,-40.2136,16.6,104.2,12.41,117.01,7.2,26.01,11.4,9.4,10.6,43.8,328.01,31.0
-Iacú,Iacú (Lagoa Bonita) - PG-PR-15,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.931506,-40.226468,19.0,132.2,33.0,161.0,4.4,16.8,9.4,15.4,6.6,28.6,292.8,26.8
-Iaçu,Iaçu (João Amaro) - PG-PR-16,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.800391,-40.363139,8.4,17.8,4.6,116.8,4.61,17.0,3.6,18.21,6.2,326.5,268.4,19.8
-Mucugê,Mucugê (Guiné) - PG-PR-24,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.771772,-41.540679,18.2,184.8,11.0,131.0,6.61,22.8,7.8,12.6,0.6,221.8,217.21,168.61
-Marcionílio Souza,Marcionílio Souza (Machado Portela) - PG-PR-26,Chapada Diamantina,RPGA do Rio Paraguaçu,-13.153732,-40.768155,18.8,20.4,15.61,160.2,1.2,5.4,8.21,20.0,3.4,52.41,345.6,92.61
-Rio do Pires,Rio do Pires - PM-CL-04,Chapada Diamantina,RPGA dos Rios Paramirim e Santo Onofre,-13.11695,-42.28411,31.8,130.8,19.01,64.4,0.0,0.0,0.0,0.4,0.0,28.6,169.4,126.2
-Iaçu,Iaçu - PG-CL-05,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.9114,-40.03177,63.41,75.7,13.6,128.6,7.81,7.41,13.8,12.6,3.01,43.81,232.01,35.2
-Marcionílio Souza,Marcionílio Souza - PG-CL-03,Chapada Diamantina,RPGA do Rio Paraguaçu,-13.00021,-40.537783,9.2,58.6,20.2,196.21,4.0,8.6,9.6,11.8,10.4,116.41,384.41,79.8
-Morro do Chapéu,Morro do Chapéu (Ventura) - PG-PR-10,Chapada Diamantina,RPGA do Rio Paraguaçu,-11.650911,-40.951765,9.4,81.8,6.0,165.0,11.4,21.4,17.0,17.6,1.6,58.61,212.0,76.2
-Lajedinho,Lajedinho (Centro) - 291900901A,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.35585,-40.90228,16.0,59.6,29.2,87.6,12.6,24.2,9.8,16.8,6.81,37.2,249.21,178.01
-Jacobina,Jacobina (Ladeira Vermelha) - 291750801A,Nordeste,RPGA do Rio Itapicuru,-11.161707,-40.554213,39.2,24.4,14.01,43.6,18.8,20.6,30.0,14.8,2.0,43.8,109.2,87.61
-Jacobina,Jacobina (Feliz Tomaz) - 291750802A,Nordeste,RPGA do Rio Itapicuru,-11.174316,-40.517837,64.81,40.6,23.0,107.0,33.2,37.0,80.8,36.2,5.2,105.8,93.61,95.0
-Capim Grosso,Capim Grosso (Pedras Altas) - 50430000,Nordeste,RPGA do Rio Itapicuru,-11.18288,-40.04725,2.2,66.2,12.2,98.0,24.6,8.8,49.2,11.0,2.2,51.81,81.6,9.0
-Ponto Novo,Ponto Novo - 50380000,Nordeste,RPGA do Rio Itapicuru,-10.845,-40.1128,3.8,85.01,13.6,109.8,28.6,29.41,45.6,24.4,3.01,24.2,136.4,31.2
-Pé de Serra,Pé de Serra - PG-CL-07,Nordeste,RPGA do Rio Paraguaçu,-11.83676,-39.65905,8.4,84.21,2.4,92.4,27.4,15.41,57.2,27.2,2.2,21.6,177.6,15.6
-Tucano,Tucano (Caldas do Jorro) - IT-CL-05,Nordeste,RPGA do Rio Itapicuru,-11.03477,-38.80386,3.6,2.2,14.4,56.81,49.0,58.4,79.4,16.4,6.01,41.21,118.4,45.2
-Saúde,Saúde - IT-CL-04,Nordeste,RPGA do Rio Itapicuru,-10.95669,-40.38329,61.81,46.41,4.6,130.2,33.6,8.61,50.2,19.0,0.8,60.2,126.8,58.41
-Várzea do Poço,Várzea do Poço (Lajinha) - IT-CL-06,Nordeste,RPGA do Rio Itapicuru,-11.4964,-40.34474,5.01,85.6,6.2,163.21,23.2,31.0,50.61,34.6,4.81,13.8,75.4,58.2
-Jacobina,Jacobina (Itapeipu) - IT-PR-34,Nordeste,RPGA do Rio Itapicuru,-11.315629,-40.356742,12.6,82.2,38.6,205.4,35.61,25.0,80.6,48.81,6.0,30.41,101.61,47.01
-Senhor do Bonfim,Senhor do Bonfim (Carrapichel) - IT-PR-37,Nordeste,RPGA do Rio Itapicuru,-10.388101,-40.220067,2.8,50.2,17.6,45.4,0.2,2.0,0.0,0.2,4.8,41.01,104.41,58.21
-Ribeira do Pombal,Ribeira do Pombal (Curral Falso) - IT-PR-01,Nordeste,RPGA do Rio Itapicuru,-10.697843,-38.5714,12.8,36.0,21.0,136.2,59.61,45.6,107.0,40.2,8.4,16.8,139.8,47.8
-Ribeira do Amparo,Ribeira do Amparo (Boa Hora) - IT-PR-13,Nordeste,RPGA do Rio Itapicuru,-10.965,-38.5234,50.4,12.4,11.61,110.0,61.2,29.8,9.41,10.8,12.21,11.0,8.21,3.2
-Filadélfia,Filadélfia (Fazenda Alecrim ) - IT-FR-21,Nordeste,RPGA do Rio Itapicuru,-10.7522,-40.22444,5.2,32.4,47.6,154.0,45.8,31.0,66.6,33.4,2.8,26.2,130.6,41.0
-Várzea Nova,Várzea Nova - SA-CL-02,Norte,RPGA do Rio Salitre,-11.23996,-40.935618,24.5,74.4,40.5,67.1,2.6,5.81,2.2,2.41,1.8,58.6,125.61,48.81
-Juazeiro,Juazeiro (CODEVASF Salitre) - MC-CL-01,Norte,RPGA dos Rios Macururé e Curaçá,-9.48778,-40.61333,47.31,91.81,7.21,46.0,0.4,6.61,2.0,0.0,0.0,78.0,46.41,118.8
-Campo Formoso,Campo Formoso - IT-CL-02,Norte,RPGA do Rio Itapicuru,-10.47062,-40.33412,4.2,45.4,46.41,94.5,93.2,40.0,148.6,87.61,18.21,35.6,142.61,48.4
-Sento Sé,Sento Sé - SO-CL-01,Norte,RPGA do Lago de Sobradinho,-9.78228,-41.81872,26.5,129.2,72.0,43.6,10.8,0.8,0.0,0.0,12.0,2.2,52.4,31.2
-Itaguaçu da Bahia,Itaguaçu da Bahia - VJ-CL-03,Norte,RPGA dos Rios Verde e Jacaré,-10.9549,-42.3465,38.9,195.8,18.8,58.8,0.4,0.0,0.2,0.0,0.0,75.0,144.4,69.4
-Juazeiro,Juazeiro - 48020000,Norte,RPGA dos Rios Macururé e Curaçá,-9.4064,-40.5036,39.0,70.8,8.8,71.2,0.0,1.4,1.0,0.0,0.0,112.6,53.41,50.2
-Ibipeba,Ibipeba - VJ-CL-02,Norte,RPGA dos Rios Verde e Jacaré,-11.62667,-42.06444,23.8,139.01,15.6,52.6,0.0,2.4,0.0,0.0,0.2,37.01,134.41,240.8
-Formosa do Rio Preto,Formosa do Rio Preto (Fazenda Barcelona) - GR-CL-03,Oeste,RPGA do Rio Grande,-11.59139,-46.02194,122.2,446.31,46.81,206.21,6.4,0.0,1.2,0.4,1.0,137.4,229.4,64.0
-Correntina,Correntina (PCH Pres. Goulart-J) - 45600000,Oeste,"RPGA do Rio Corrente e Riachos do Ramalho, Serra Dourada e Brejo Velho",-13.3344,-44.6208,63.8,198.0,35.8,112.2,4.81,0.0,0.2,0.0,0.0,60.4,322.6,166.2
-Salvador,Salvador (Periperi) - 292740820A,Recôncavo,RPGA do Recôncavo Norte,-12.867344,-38.458111,58.21,67.61,97.4,410.0,225.6,153.8,311.6,159.4,35.2,56.4,176.2,109.81
-Salvador,Salvador (Mussurunga) - 292740821A,Recôncavo,RPGA do Recôncavo Norte,-12.907733,-38.440111,141.01,61.8,57.0,408.2,135.2,182.21,258.0,182.41,40.8,59.81,210.4,123.61
-Salvador,Salvador (Itapuã) - 292740819A,Recôncavo,RPGA do Recôncavo Norte,-12.947736,-38.370136,123.61,31.6,88.2,365.2,127.6,128.21,180.6,146.8,37.0,61.81,239.21,111.2
-Salvador,Salvador (Ondina) - 83229,Recôncavo,RPGA do Recôncavo Norte,-13.005278,-38.505833,161.7,54.9,65.9,305.7,123.61,150.8,263.0,182.0,37.8,152.1,316.0,201.4
-Salvador,Salvador (São tomé de Paripe) - 292740806A,Recôncavo,RPGA do Recôncavo Norte,-12.795508,-38.489389,37.32,82.3,41.03,489.99,183.48,138.89,218.9,85.6,37.45,43.95,128.26,100.92
-Salvador,Salvador (Federação) - 292740803A,Recôncavo,RPGA do Recôncavo Norte,-13.000791,-38.511056,160.21,40.41,58.32,270.59,115.67,145.84,247.65,180.66,37.05,127.98,275.65,173.34
-Salvador,Salvador (Cabula) - 292740810A,Recôncavo,RPGA do Recôncavo Norte,-12.961347,-38.460778,154.17,48.65,44.72,323.1,176.97,149.03,246.9,178.41,8.5,136.62,211.09,95.34
-Salvador,Salvador (Águas Claras) - 292740808A,Recôncavo,RPGA do Recôncavo Norte,-12.8944,-38.441889,84.39,79.72,57.97,325.9,179.05,143.12,237.5,140.14,38.84,113.64,173.49,90.74
-Salvador,Salvador (São Caetano) - 292740814A,Recôncavo,RPGA do Recôncavo Norte,-12.939678,-38.474667,131.48,46.29,54.04,283.73,154.77,110.91,254.21,192.52,31.35,87.77,169.53,89.08
-Salvador,Salvador (Rio Sena) - 292740805A,Recôncavo,RPGA do Recôncavo Norte,-12.891344,-38.470778,77.57,87.15,66.23,364.09,184.07,153.33,311.61,176.91,49.71,107.3,170.41,96.03
-Salvador,Salvador (Valéria) - 292740817A,Recôncavo,RPGA do Recôncavo Norte,-12.8644,-38.438276,59.76,80.93,73.92,405.7,203.01,154.68,308.05,126.94,34.34,54.34,138.16,97.9
-Candeias,Candeias (Centro) - 290650101A,Recôncavo,RPGA do Recôncavo Norte,-12.670229,-38.544112,59.53,40.95,38.55,146.8,210.08,77.04,66.4,107.09,31.26,55.4,184.6,43.01
-Lauro de Freitas,Lauro de Freitas (Itinga 02) - 291920704A,Recôncavo,RPGA do Recôncavo Norte,-12.89,-38.353,74.75,52.12,33.93,288.5,112.29,108.73,222.77,117.54,23.92,42.32,215.28,80.1
-Lauro de Freitas,Lauro de Freitas (Rua 02 de Julho) - 291920705A,Recôncavo,RPGA do Recôncavo Norte,-12.839,-38.35,66.13,58.28,64.42,365.35,169.15,136.06,376.5,149.2,39.52,57.05,245.18,104.8
-São Francisco do Conde,São Francisco do Conde - RN-CL-07,Recôncavo,RPGA do Recôncavo Norte,-12.61136,-38.68222,60.6,66.1,42.61,395.0,270.0,169.51,191.6,88.2,54.0,65.8,183.8,52.0
-Simões Filho,Simões Filho (CIA) - 293070902A,Recôncavo,RPGA do Recôncavo Norte,-12.825461,-38.409051,74.21,54.8,49.2,488.21,201.4,161.21,344.01,149.6,41.4,54.6,207.01,117.6
-Jaguaquara,Jaguaquara (Lagoa) - 291760701A,Sudoeste,RPGA do Recôncavo Sul,-13.523228,-39.968685,26.4,73.0,34.2,135.2,18.6,29.2,28.4,34.6,12.0,91.8,267.8,191.6
-Jucuruçu,Jucuruçu (PCH Cach. da Lixa M) - 55354000,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",-17.06703,-40.068619,12.0,74.8,53.6,94.6,49.2,39.6,44.2,71.4,46.21,122.2,196.2,72.61
-Itajuípe,Itajuípe,Sul,RPGA do Leste,-14.6744,-39.3769,135.61,120.6,76.8,94.2,17.6,96.01,18.6,65.2,45.81,72.2,9.6,92.61
-Barra do Rocha,Barra do Rocha - 290310201A,Sul,RPGA do Rio de Contas,-14.208644,-39.598562,159.21,132.2,44.81,125.81,15.0,75.81,50.61,91.21,17.2,139.21,181.8,103.2
-Guaratinga,Guaratinga (Novo Horizonte) - 291180801A,Sul,"RPGA dos Rios dos Frades, Buranhém e Santo Antônio",-16.582916,-39.780555,64.81,105.0,34.8,97.4,13.8,37.41,32.6,34.6,46.81,121.0,182.6,309.21
-Pau Brasil,Pau Brasil - 292390201A,Sul,RPGA do Rio Pardo,-15.46122,-39.65225,37.21,38.6,20.8,100.4,22.2,101.81,22.6,87.81,27.2,119.6,160.8,231.0
-Jucuruçu,Jucuruçu (PCH Colino I J) - 55357000,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",-17.0822,-40.0772,30.0,77.75,61.75,107.25,46.5,8.25,0.25,22.75,48.5,146.25,220.25,53.25
-Ilhéus,Ilhéus (Conquista) - 291360601A,Sul,RPGA do Leste,-14.797213,-39.04608,129.71,135.2,124.25,188.28,50.63,184.02,96.28,105.46,116.08,197.05,240.5,381.58
-Ilhéus,Ilhéus (Malhado) - 291360602A,Sul,RPGA do Leste,-14.789158,-39.048858,140.93,119.53,122.22,172.43,36.25,143.72,88.36,97.49,118.67,179.18,215.16,340.29
-Nova Viçosa,Nova Viçosa (Centro) - 292300102A,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",-17.893,-39.372,42.3,259.07,40.81,227.12,97.67,26.96,71.82,122.82,64.81,203.09,278.46,161.67
-Itapebi,Itapebi (Jusante) - 54945000,Sul,RPGA do Rio Jequitinhonha,-15.949206,-39.5225,64.0,61.4,15.0,79.8,17.0,101.61,44.2,132.8,77.61,73.0,172.21,127.8
-Itabuna,Itabuna (Ferradas) - 53170000,Sul,RPGA do Leste,-14.8439,-39.3311,162.21,101.41,67.0,86.8,19.8,66.21,34.2,58.21,71.81,99.2,207.8,194.6
-Morpará,Morpará - 46360000,São Francisco,RPGA dos Rios Paramirim e Santo Onofre,-11.5583,-43.2825,60.4,306.4,26.6,30.4,2.6,2.0,0.2,0.0,2.6,90.0,108.01,117.6
-Bom Jesus da Lapa,Bom Jesus da Lapa - 83288,São Francisco,RPGA do Rio Carnaíba de Dentro,-13.251389,-43.405278,154.7,163.4,18.5,114.7,0.0,0.0,0.0,0.0,0.0,2.6,132.3,105.1
-Cotegipe,Cotegipe (Faz. Macambira) - 46675000,São Francisco,RPGA do Rio Grande,-11.6106,-44.1567,38.61,131.2,47.8,48.8,0.0,0.0,0.0,0.0,0.0,58.2,205.4,117.0
-Paratinga,Paratinga (Volta da Serra) - CD-CL-02,São Francisco,RPGA do Rio Carnaíba de Dentro,-12.57591,-43.12782,69.8,121.61,6.4,98.2,1.21,0.0,0.61,2.0,0.61,45.2,154.8,66.4
-Xique-Xique,Xique-Xique - PM-CL-05,São Francisco,RPGA dos Rios Paramirim e Santo Onofre,-10.82519,-42.68914,41.9,151.61,45.2,58.0,0.0,0.0,0.0,0.0,0.0,63.6,104.21,80.4
+municipio,estacao,regiao,rpga,latitude,longitude,Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho,Agosto,Setembro,Outubro
+Iaçu,Iaçu - 51280000,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.762,-40.214,16.6,104.2,12.41,117.01,7.2,26.01,11.4,9.4,10.6,31.0
+Iacú,Iacú (Lagoa Bonita) - PG-PR-15,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.932,-40.226,19.0,132.2,33.0,161.0,4.4,16.8,9.4,15.4,6.6,24.6
+Iaçu,Iaçu (João Amaro) - PG-PR-16,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.8,-40.363,8.4,17.8,4.6,116.8,4.61,17.0,3.6,18.21,6.2,313.5
+Mucugê,Mucugê (Guiné) - PG-PR-24,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.772,-41.541000000000004,18.2,184.8,11.0,131.0,6.61,22.8,7.8,12.6,0.6,213.8
+Marcionílio Souza,Marcionílio Souza (Machado Portela) - PG-PR-26,Chapada Diamantina,RPGA do Rio Paraguaçu,-13.154000000000002,-40.768,18.8,20.4,15.61,160.2,1.2,5.4,8.21,20.0,3.4,46.41
+Marcionílio Souza,Marcionílio Souza - PG-CL-03,Chapada Diamantina,RPGA do Rio Paraguaçu,-13.0,-40.538000000000004,9.2,58.6,20.2,196.21,4.0,8.6,9.6,11.8,10.4,109.01
+Morro do Chapéu,Morro do Chapéu (Ventura) - PG-PR-10,Chapada Diamantina,RPGA do Rio Paraguaçu,-11.651,-40.952,9.4,81.8,6.0,165.0,11.4,21.4,17.0,17.6,1.6,53.81
+Lajedinho,Lajedinho (Centro) - 291900901A,Chapada Diamantina,RPGA do Rio Paraguaçu,-12.356,-40.902,16.0,59.6,29.2,87.6,12.6,24.2,9.8,16.8,6.81,20.4
+Jacobina,Jacobina (Ladeira Vermelha) - 291750801A,Nordeste,RPGA do Rio Itapicuru,-11.162,-40.554,39.2,24.4,14.01,43.6,18.8,20.6,30.0,14.8,2.0,33.8
+Jacobina,Jacobina (Feliz Tomaz) - 291750802A,Nordeste,RPGA do Rio Itapicuru,-11.174000000000001,-40.518,64.81,40.6,23.0,107.0,33.2,37.0,80.8,36.2,5.2,79.2
+Capim Grosso,Capim Grosso (Pedras Altas) - 50430000,Nordeste,RPGA do Rio Itapicuru,-11.183,-40.047,2.2,66.2,12.2,98.0,24.6,8.8,49.2,11.0,2.2,47.61
+Ponto Novo,Ponto Novo - 50380000,Nordeste,RPGA do Rio Itapicuru,-10.845,-40.113,3.8,85.01,13.6,109.8,28.6,29.41,45.6,24.4,3.01,18.0
+Capim Grosso,Capim Grosso - IT-CL-03,Nordeste,RPGA do Rio Itapicuru,-11.368,-40.034,1.2,37.4,4.0,172.6,20.41,11.6,70.6,39.0,19.2,10.4
+Pé de Serra,Pé de Serra - PG-CL-07,Nordeste,RPGA do Rio Paraguaçu,-11.837,-39.659,8.4,84.21,2.4,92.4,27.4,15.41,57.2,27.2,2.2,16.6
+Jacobina,Jacobina (Itapeipu) - IT-PR-34,Nordeste,RPGA do Rio Itapicuru,-11.315999999999999,-40.357,12.6,82.2,38.6,205.4,35.61,25.0,80.6,48.81,6.0,14.21
+Senhor do Bonfim,Senhor do Bonfim (Carrapichel) - IT-PR-37,Nordeste,RPGA do Rio Itapicuru,-10.388,-40.22,2.8,50.2,17.6,45.4,0.2,2.0,0.0,0.2,4.8,32.81
+Ribeira do Pombal,Ribeira do Pombal (Curral Falso) - IT-PR-01,Nordeste,RPGA do Rio Itapicuru,-10.698,-38.571,12.8,36.0,21.0,136.2,59.61,45.6,107.0,40.2,8.4,3.81
+Ribeira do Amparo,Ribeira do Amparo (Boa Hora) - IT-PR-13,Nordeste,RPGA do Rio Itapicuru,-10.965,-38.523,50.4,12.4,11.61,110.0,61.2,29.8,9.41,10.8,12.21,0.4
+Filadélfia,Filadélfia (Fazenda Alecrim ) - IT-FR-21,Nordeste,RPGA do Rio Itapicuru,-10.752,-40.224000000000004,5.2,32.4,47.6,154.0,45.8,31.0,66.6,33.4,2.8,18.2
+Juazeiro,Juazeiro - 48020000,Norte,RPGA dos Rios Macururé e Curaçá,-9.406,-40.504,39.0,70.8,8.8,71.2,0.0,1.4,1.0,0.0,0.0,112.6
+Ibipeba,Ibipeba - VJ-CL-02,Norte,RPGA dos Rios Verde e Jacaré,-11.627,-42.06399999999999,23.8,139.01,15.6,52.6,0.0,2.4,0.0,0.0,0.2,37.01
+Correntina,Correntina (PCH Pres. Goulart-J) - 45600000,Oeste,"RPGA do Rio Corrente e Riachos do Ramalho, Serra Dourada e Brejo Velho",-13.334000000000001,-44.621,63.8,198.0,35.8,112.2,4.81,0.0,0.2,0.0,0.0,60.4
+Correntina,Correntina (PCH Pres. Goulart-M1) - 45588000,Oeste,"RPGA do Rio Corrente e Riachos do Ramalho, Serra Dourada e Brejo Velho",-13.341,-44.641000000000005,26.4,113.2,15.2,105.0,6.0,0.0,0.8,0.0,0.0,0.61
+Salvador,Salvador (Periperi) - 292740820A,Recôncavo,RPGA do Recôncavo Norte,-12.867,-38.458,58.21,67.61,97.4,410.0,225.6,153.8,311.6,159.4,35.2,24.2
+Salvador,Salvador (Mussurunga) - 292740821A,Recôncavo,RPGA do Recôncavo Norte,-12.908,-38.44,141.01,61.8,57.0,408.2,135.2,182.21,258.0,182.41,40.8,37.0
+Salvador,Salvador (Itapuã) - 292740819A,Recôncavo,RPGA do Recôncavo Norte,-12.948,-38.37,123.61,31.6,88.2,365.2,127.6,128.21,180.6,146.8,37.0,36.2
+Cachoeira,Cachoeira - 290490201A,Recôncavo,RPGA do Rio Paraguaçu,-12.607999999999999,-38.961,37.6,11.0,39.8,210.0,110.81,149.21,319.4,164.4,47.2,7.4
+São Félix,São Félix - 292900801A,Recôncavo,RPGA do Rio Paraguaçu,-12.607000000000001,-38.97,39.0,21.6,39.6,196.21,93.81,120.61,262.8,143.0,28.6,6.81
+Salvador,Salvador (Ondina) - 83229,Recôncavo,RPGA do Recôncavo Norte,-13.005,-38.506,197.3,54.9,65.9,305.7,123.61,150.8,263.0,182.0,37.8,127.3
+Salvador,Salvador (São tomé de Paripe) - 292740806A,Recôncavo,RPGA do Recôncavo Norte,-12.796,-38.489000000000004,37.32,82.3,41.03,489.99,183.48,138.89,218.9,85.6,37.45,12.22
+Salvador,Salvador (Federação) - 292740803A,Recôncavo,RPGA do Recôncavo Norte,-13.001,-38.510999999999996,160.21,40.41,58.32,270.59,115.67,145.84,247.65,180.66,37.05,100.4
+Salvador,Salvador (Cabula) - 292740810A,Recôncavo,RPGA do Recôncavo Norte,-12.960999999999999,-38.461,154.17,48.65,44.72,323.1,176.97,149.03,246.9,178.41,8.5,105.68
+Salvador,Salvador (Águas Claras) - 292740808A,Recôncavo,RPGA do Recôncavo Norte,-12.894,-38.442,84.39,79.72,57.97,325.9,179.05,143.12,237.5,140.14,38.84,91.92
+Salvador,Salvador (São Caetano) - 292740814A,Recôncavo,RPGA do Recôncavo Norte,-12.94,-38.475,131.48,46.29,54.04,283.73,154.77,110.91,254.21,192.52,31.35,62.2
+Salvador,Salvador (Rio Sena) - 292740805A,Recôncavo,RPGA do Recôncavo Norte,-12.890999999999998,-38.471,77.57,87.15,66.23,364.09,184.07,153.33,311.61,176.91,49.71,73.57
+Salvador,Salvador (Valéria) - 292740817A,Recôncavo,RPGA do Recôncavo Norte,-12.864,-38.438,59.76,80.93,73.92,405.7,203.01,154.68,308.05,126.94,34.34,27.53
+Candeias,Candeias (Centro) - 290650101A,Recôncavo,RPGA do Recôncavo Norte,-12.67,-38.544000000000004,59.53,40.95,38.55,146.8,210.08,77.04,66.4,107.09,31.26,17.12
+Lauro de Freitas,Lauro de Freitas (Areia Branca) - 291920706A,Recôncavo,RPGA do Recôncavo Norte,-12.841,-38.336999999999996,58.12,44.85,50.92,364.41,107.96,153.16,391.96,140.87,29.69,19.19
+Lauro de Freitas,Lauro de Freitas (Itinga 02) - 291920704A,Recôncavo,RPGA do Recôncavo Norte,-12.89,-38.353,74.75,52.12,33.93,288.5,112.29,108.73,222.77,117.54,23.92,19.69
+Lauro de Freitas,Lauro de Freitas (Vila Praiana) - 291920702A,Recôncavo,RPGA do Recôncavo Norte,-12.901,-38.308,120.72,62.45,59.95,233.08,110.33,113.26,256.96,116.93,29.8,9.86
+Lauro de Freitas,Lauro de Freitas (Rua 02 de Julho) - 291920705A,Recôncavo,RPGA do Recôncavo Norte,-12.839,-38.35,66.13,58.28,64.42,365.35,169.15,136.06,376.5,149.2,39.52,23.89
+Gandú,Gandú (Dois de Julho) - 291120401A,Recôncavo,RPGA do Recôncavo Sul,-13.741,-39.483000000000004,147.06,46.56,79.0,150.44,13.85,77.14,40.74,76.56,31.59,31.89
+Simões Filho,Simões Filho (CIA) - 293070902A,Recôncavo,RPGA do Recôncavo Norte,-12.825,-38.409,74.21,54.8,49.2,488.21,201.4,161.21,344.01,149.6,41.4,21.8
+Rafael Jambeiro,Rafael Jambeiro (PC Argoim) - 51351000,Recôncavo,RPGA do Rio Paraguaçu,-12.587,-39.522,26.6,17.4,13.8,51.6,9.2,18.8,14.6,24.2,5.61,2.41
+Santo Estevão,Santo Estevão (PC Rio Paratigi) - 51370000,Recôncavo,RPGA do Rio Paraguaçu,-12.515,-39.383,32.4,56.8,30.4,85.01,20.4,67.8,38.2,53.41,5.61,5.81
+Jaguaquara,Jaguaquara (Lagoa) - 291760701A,Sudoeste,RPGA do Recôncavo Sul,-13.523,-39.969,26.4,73.0,34.2,135.2,18.6,29.2,28.4,34.6,12.0,82.0
+Jucuruçu,Jucuruçu (PCH Cach. da Lixa M) - 55354000,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",-17.067,-40.069,12.0,74.8,53.6,94.6,49.2,39.6,44.2,71.4,46.21,101.4
+Vereda,Vereda (PCH Colino II M) - 55355600,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",-17.070999999999998,-40.155,41.0,140.75,82.75,176.25,62.0,39.25,38.25,90.5,64.5,156.0
+Itajuípe,Itajuípe,Sul,RPGA do Leste,-14.674000000000001,-39.376999999999995,135.61,120.6,76.8,94.2,17.6,96.01,18.6,65.2,45.81,64.8
+Barra do Rocha,Barra do Rocha - 290310201A,Sul,RPGA do Rio de Contas,-14.209000000000001,-39.599000000000004,159.21,132.2,44.81,125.81,15.0,75.81,50.61,91.21,17.2,89.01
+Guaratinga,Guaratinga (Novo Horizonte) - 291180801A,Sul,"RPGA dos Rios dos Frades, Buranhém e Santo Antônio",-16.583,-39.781,64.81,105.0,34.8,97.4,13.8,37.41,32.6,34.6,46.81,101.01
+Pau Brasil,Pau Brasil - 292390201A,Sul,RPGA do Rio Pardo,-15.460999999999999,-39.652,37.21,38.6,20.8,100.4,22.2,101.81,22.6,87.81,27.2,102.2
+Mascote,Mascote - 53950000,Sul,RPGA do Rio Pardo,-15.565999999999999,-39.303000000000004,100.0,104.4,41.41,60.81,38.8,99.01,44.6,107.01,76.0,100.8
+Jucuruçu,Jucuruçu (PCH Colino I J) - 55357000,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",-17.082,-40.077,30.0,77.75,61.75,107.25,46.5,8.25,0.25,22.75,48.5,123.5
+Ilhéus,Ilhéus (Conquista) - 291360601A,Sul,RPGA do Leste,-14.797,-39.046,129.71,135.2,124.25,188.28,50.63,184.02,96.28,105.46,116.08,153.61
+Ilhéus,Ilhéus (Malhado) - 291360602A,Sul,RPGA do Leste,-14.789000000000001,-39.049,140.93,119.53,122.22,172.43,36.25,143.72,88.36,97.49,118.67,139.33
+Nova Viçosa,Nova Viçosa (Centro) - 292300102A,Sul,"RPGA dos Rios Peruípe, Itanhém e Jucuruçu",-17.893,-39.372,42.3,259.07,40.81,227.12,97.67,26.96,71.82,122.82,64.81,117.78
+Itapebi,Itapebi (Jusante) - 54945000,Sul,RPGA do Rio Jequitinhonha,-15.949000000000002,-39.523,64.0,61.4,15.0,79.8,17.0,101.61,44.2,132.8,77.61,60.41
+Itabuna,Itabuna (Ferradas) - 53170000,Sul,RPGA do Leste,-14.844000000000001,-39.330999999999996,162.21,101.41,67.0,86.8,19.8,66.21,34.2,58.21,71.81,71.8
+Morpará,Morpará - 46360000,São Francisco,RPGA dos Rios Paramirim e Santo Onofre,-11.558,-43.282,60.4,306.4,26.6,30.4,2.6,2.0,0.2,0.0,2.6,75.6
+Bom Jesus da Lapa,Bom Jesus da Lapa - 83288,São Francisco,RPGA do Rio Carnaíba de Dentro,-13.251,-43.405,150.7,160.5,18.5,116.11,0.0,0.0,0.0,0.0,0.0,2.6
+Cotegipe,Cotegipe (Faz. Macambira) - 46675000,São Francisco,RPGA do Rio Grande,-11.610999999999999,-44.157,38.61,131.2,47.8,48.8,0.0,0.0,0.0,0.0,0.0,58.0
+Bom Jesus da Lapa,Bom Jesus da Lapa - 45480000,São Francisco,"RPGA do Rio Corrente e Riachos do Ramalho, Serra Dourada e Brejo Velho",-13.257,-43.435,77.21,151.21,22.6,68.2,0.0,0.0,0.0,0.0,0.0,0.0
+Barra,Barra - 46998000,São Francisco,RPGA do Rio Grande,-11.093,-43.14,37.4,129.8,28.21,123.2,0.0,1.0,0.0,0.0,0.4,61.0
+Paratinga,Paratinga (Volta da Serra) - CD-CL-02,São Francisco,RPGA do Rio Carnaíba de Dentro,-12.575999999999999,-43.128,69.8,121.61,6.4,98.2,1.21,0.0,0.61,2.0,0.61,45.2
