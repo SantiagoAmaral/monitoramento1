@@ -210,7 +210,7 @@ def update_graph1(stations_value,clima_value,graph_type, df):
         trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = '#080808', text = j))
 
         data = trace_1
-
+    meses = [ 'Janeiro','Favereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']
     if graph_type == 'Scatter':
         trace_1 = []
         t_1 = 0
@@ -218,14 +218,13 @@ def update_graph1(stations_value,clima_value,graph_type, df):
             if df_graph1.loc[df_graph1.index.isin([i])].shape[0] == 0:
                 continue
             df1 = df_graph1[df_graph1.index == i].iloc[:,5:].T
-            trace_1.append(go.Scatter(name=i, x=df1.index, y=df1[i], text=i))
+            trace_1.append(go.Scatter(name=i, x=meses, y=df1[i], text=i))
             t_1+=1
 
         
         j = clima_value
-        df2 = df_clima2[df_clima2.index == j].iloc[:,7:-1]
-        df2 = df2.T
-        trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = '#080808', text = j))
+        df2 = df_clima2[df_clima2.index == j].iloc[:,7:-2].T
+        trace_1.append(go.Scatter(name=j, x=meses, y=df2[j], line={'dash': 'dash'}, line_color = '#080808', text = j))
         
 
         data = trace_1
