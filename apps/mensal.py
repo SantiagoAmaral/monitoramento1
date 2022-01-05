@@ -223,7 +223,8 @@ def update_graph1(stations_value,clima_value,graph_type, df):
 
         
         j = clima_value
-        df2 = df_clima2[df_clima2.index == j].iloc[:,7:-1].T
+        df2 = df_clima2[df_clima2.index == j].iloc[:,7:-1]
+        df2 = df2.T
         trace_1.append(go.Scatter(name=j, x=df2.index, y=df2[j], line={'dash': 'dash'}, line_color = '#080808', text = j))
         
 
