@@ -60,5 +60,5 @@ layout = html.Div([
     dbc.Row([html.A('ANA - Agência Nacional de Águas',href = 'https://www.snirh.gov.br/hidroweb/apresentacao', target = '_blank'),
     ], justify='center'),
     html.H6("Developed by Alisson Santiago - alisson.santiago123@gmail.com", style={ 'textAlign': 'center', "margin-top": "40px"}),
-    html.A('Linkedin: Alisson Santiago Amaral',href = 'https://www.linkedin.com/in/alisson-santiago-amaral-3a75b566/', target = '_blank'), justify='center')
+    dbc.Row(html.A('Linkedin: Alisson Santiago Amaral',href = 'https://www.linkedin.com/in/alisson-santiago-amaral-3a75b566/', target = '_blank'), justify='center')
 ])
